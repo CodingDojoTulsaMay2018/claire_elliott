@@ -8,6 +8,7 @@
     background-color: silver;
     margin: 0px auto;
     padding: 15px;
+    
 }
 #header{
     height: 150px;
@@ -16,6 +17,7 @@
     margin-bottom: 20px;
 }
 #navigation{
+    vertical-align: top;
     height: 300px;
     width: 200px;
     background-color: blue;
@@ -23,7 +25,6 @@
     margin-right: 15px;
 }
 #main_content{
-    vertical-align: top;
     height: 400px;
     width: 700px;
     background-color: red;
