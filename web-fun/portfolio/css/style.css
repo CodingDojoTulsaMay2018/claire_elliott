@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+#top-content img {
+    max-width: 400px;
+    margin: 0 20px;
+    border: 3px solid grey;
+}
+h1 {
+    font-family: 'Comic Sans MS';
+    display: inline-block;
+    vertical-align: middle;
+}
+#header span {
+    font-weight: bolder;
+    margin-left: 37%;
+}
+
+p,
+a {
+    padding: 10px;
+    font-size: 12pt;
+}
+h5 {
+    background: linear-gradient(#999,#6f5964,#999);
+    padding: 10px;
+    color: white;
+}
+#wrapper {
+    width: 940px;
+    margin: 0 auto;
+    background: linear-gradient( #2e252a,#6f5964,#2e252a);
+}
+#header {
+    text-align: justify;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+#header,
+.container,
+.bio {
+    background-color: #f6f6f6;
+}
+#footer {
+    height: 70px;
+    text-align: center;
+    margin-top: 20px;
+    background-color: white;
+}
+#footer a {
+    vertical-align: top;
+    padding: 2px;
+}
+.header {
+    background-color: darkgray;
+    padding: 5px;
+}
+#top-content {
+    height: 263px;
+}
+.bio {
+    vertical-align: top;
+    display: inline-block;
+    height: inherit;
+    max-width: 460px;
+}
+#main-content {
+    margin: 20px auto 0;
+    width: 100%;
+}
+.container {
+    width: 280px;
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 20px;
+}
+.thumbnail {
+    margin: 0;
+    max-width: 100%;
+}
+.badge {
+    margin: 5px;
+    display: inline-block;
+    width: 40px;
+}
+.button {
+    font-weight: bold;
+    padding: 5px;
+    font-size: 10pt;
+    margin: 5px auto 20px;
+    text-align: center;
+    max-width: 120px;
+    display: block;
+    background-color: #407d61;
+    border: 1px solid #003500;
+    color: white;
+    box-shadow: 3px 3px 8px #888888;
+    border-radius: 7px;
+    text-decoration: none;
+}
+.social-badge {
+    padding: 0;
+    width: 15px;
+}
