@@ -152,9 +152,7 @@ function swapToCenter(arr){
     var temp = 0;
     for(i = 0; i < arr.length/2; i++){
         temp = arr[i];
-      console.log(temp)
         arr[i] = arr[arr.length-1-i];
-      console.log(arr[i]);
         arr[arr.length-1-i] = temp;
     }
     return arr;
