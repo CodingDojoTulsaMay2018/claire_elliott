@@ -1,0 +1,23 @@
+body{
+    background-color: #a6bdd8;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+img{
+    min-height: 210px;
+    max-width: 100%;
+}
+h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.container {
+    
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #5f79a0;
+}
+.row,
+button{
+    margin-bottom: 30px;
+}
