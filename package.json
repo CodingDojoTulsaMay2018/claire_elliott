@@ -1,0 +1,22 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodingDojoTulsaMay2018/claire_elliott.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodingDojoTulsaMay2018/claire_elliott/issues"
+  },
+  "homepage": "https://github.com/CodingDojoTulsaMay2018/claire_elliott#readme",
+  "description": "",
+  "dependencies": {
+    "jasmine": "^3.1.0"
+  }
+}
