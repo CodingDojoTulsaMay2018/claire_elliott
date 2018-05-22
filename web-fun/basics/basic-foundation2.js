@@ -150,7 +150,7 @@ function alwaysHungry(arr){
 
 function swapToCenter(arr){
     var temp = 0;
-    for(i = 0; i < arr.length/2; i++){
+    for(i = 0; i < arr.length/2; i+=2){
         temp = arr[i];
         arr[i] = arr[arr.length-1-i];
         arr[arr.length-1-i] = temp;
