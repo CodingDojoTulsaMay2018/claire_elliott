@@ -57,7 +57,6 @@ $(document).ready(function(){
     })
     // div 13
     $("#attr-btn").click(function(){
-        console.log("boop");
         $("link:last").attr("href"," ");
     })
     // div 14
