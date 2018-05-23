@@ -43,9 +43,11 @@ function replaceNegatives(arr){
 // 4.  Given an array, and indices start and end, remove vals in that index range, working in-place (hence shortening the array).  For example, removeVals([20,30,40,50,60,70],2,4) should return [20,30,70].
 
 function removeVals(arr,start,end){
-  arr[end] = arr[arr.length-1];
-  for(i=end; i>=start; i--){
-    arr.pop();
+  if(end != arr.length-1){
+    for(i=end; i>=start; i--){
+      arr[i] = arr[arr.length-1];
+      arr.pop();
+    }
   }
   return arr;
 }
