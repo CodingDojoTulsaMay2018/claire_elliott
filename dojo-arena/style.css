@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#wrapper {
+    background-color: black;
+    text-align: center;
+    height: 600px;
+    padding: 50px;
+    width: 800px;
+    margin:0 auto;
+    
+}
+.container {
+    border-radius: 5px;
+    background-color: #888;
+    padding: 20px;
+    margin: 0 auto;
+    width: 300px;
+}
+.beach{
+    background-image: url('beach.jpg');
+    background-size: cover;
+}
+.planet{
+    background-image: url('earth.jpg');
+    background-size: cover;
+}
+.dojo{
+    background-image: url('dojo.jpg');
+    background-size: cover;
+}
+.forest{
+    background-image: url('forest.jpg');
+    background-size: cover;
+}
+.matrix{
+    background-image: url('matrix.jpg');
+    background-size: cover;
+}
+.snow{
+    background-image: url('snow.jpg');
+    background-size: cover;
+}
+.step-2{
+    color: white;
+}
+#fighterOne,
+#fighterTwo{
+    height: 200px;
+    max-width: 200px;
+    position: absolute;
+}
+img{
+    height: 100%;
+}
+#fighterOne{
+    top: 450px;
+}
+#fighterTwo{
+    top: 450px;
+    left: 950px;
+}
