@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet/less" href="style.less">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
+    <title>jQuery Functions: with LESS</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>jQuery Functions</h1>
+        <div class="container">
+            <h3>.click</h3>
+            <div class="content">
+                <button type="button" id="click-btn" class="btn btn-dark btn-sm">.click</button>
+                <p>This is a really good event listener!</p>
+                
+            </div>
+        </div>
+        <div class="container">
+            <h3>.hide/.show</h3>
+            <div class="content">
+                <button type="button"  id="hide" class="btn btn-dark btn-sm">.hide</button>
+                <button type="button"  id="show" class="btn btn-dark btn-sm">.show</button>
+                <p class="hide-show">Click the .hide button to hide this p tag. Click .show to show this p tag.</p>
+                
+            </div>
+        </div>
+        <div class="container">
+            <h3>.toggle</h3>
+            <div class="content">
+                <button type="button" id="toggle" class="btn btn-dark btn-sm">.toggle</button>
+                <p class="toggle">Click the . toggle button to hide or show this p tag. You onlly have to use one button.</p>
+                
+            </div>
+        </div>
+        <div class="container">
+            <h3>.slideDown/.slideUp</h3>
+            <div class="content">
+                <button type="button" id="slide-down" class="btn btn-dark btn-sm">.slideDown</button>
+                <button type="button" id="slide-up"class="btn btn-dark btn-sm">.slideUp</button>
+                <p class="slide-ud">Click the .slideDown button to display this p tag with a slide effect. Slick the .slideUp button to hide this p tag with a slide effect.</p>
+                
+            </div>
+        </div>
+        <div class="container">
+            <h3>.slideToggle</h3>
+            <div class="content">
+                <button type="button" id="slide-toggle" class="btn btn-dark btn-sm">.slideToggle</button>
+                <p class="slide-toggle">Click .slideToggle to toggle between slideUp() and slideDown() methods to hide and display this p tag.</p>
+                
+            </div>
+        </div>
+        <div class="container">
+            <h3>.fadeIn/.fadeOut</h3>
+            <div class="content">
+                <button type="button" id="fade-in" class="btn btn-dark btn-sm">.fadeIn</button>
+                <button type="button" id="fade-out" class="btn btn-dark btn-sm">.fadeOut</button>
+                <p class="fade-function">Click .fadeOut button to hide this p tag with a fade effect. Click .fadeIn button to show this p tag with a fade effect.</p>
+            </div>
+        </div>
+        <div class="container">
+            <h3>.addClass</h3>
+            <div class="content">
+                <button type="button" id="add-class" class="btn btn-dark btn-sm">.addClass</button>
+                <p class="add-class">Click .addClass button to add "elegent" class to this p tag.</p>
+            </div>
+        </div>
+        <div class="container">
+            <h3>.before</h3>
+            <div class="content">
+                <button type="button" id="before-btn" class="btn btn-dark btn-sm">.before</button>
+                <p class="before-p">Click .before button to insert specified content "before" this p tag.</p>
+            </div>
+        </div>
+        <div class="container">
+            <h3>.after</h3>
+            <div class="content">
+                <button type="button" id="after-btn" class="btn btn-dark btn-sm">.after</button>
+                <p class="after-p">Click .after button to insert specified content "after" this p tag.</p>
+            </div>
+        </div>
+        <div class="container">
+            <h3>.append</h3>
+            <div class="content">
+                <button type="button" id="append" class="btn btn-dark btn-sm">.append</button>
+                <p class="append-p">Click .append button to append specified content to this p tag.</p>
+            </div>
+        </div>
+        <div class="container">
+            <h3>.html</h3>
+            <div class="content">
+                <button type="button" id="html-btn" class="btn btn-dark btn-sm">.html</button>
+                <p class="html-p">Click. html button to set specified content of this p tag.</p>
+                
+            </div>
+        </div>
+        <div class="container">
+            <h3>.attr</h3>
+            <div class="content">
+                <button type="button" id="attr-btn" class="btn btn-dark btn-sm">.attr</button>
+                <p class="attr-p">Click .attr button to replace the CSS link href value.</p>
+            </div>
+        </div>
+        <div class="container">
+            <h3>.val</h3>
+            <div class="content">
+                <button type="button" id="val-btn" class="btn btn-dark btn-sm">.val</button>
+                <p>Click .val button to change value of this textarea element.</p>
+                <textarea name="val-test" id="#val-input"></textarea>
+            </div>
+        </div>
+        <div class="container">
+            <h3>.text</h3>
+            <div class="content">
+                <button type="button" id="text-btn" class="btn btn-dark btn-sm">.text</button>
+                <p class="text-p">Click .text button to set text content of this p tag.</p>
+            </div>
+        </div>
+        <div class="container">
+            <h3>.data</h3>
+            <div class="content">
+                <button type="button" id="data-btn" class="btn btn-dark btn-sm">.data</button>
+                <p class="data-p">Click .data to populate object, and then attaches data to this p tag. Scott has a <span></span> named <span></span></p>
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</html>
