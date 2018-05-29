@@ -17,7 +17,6 @@ $(document).ready(function(){
     })
     // div 5
     $("#slide-down").click(function(){
-        console.log("boop");
         $(".slide-ud").slideDown();
     })
     $("#slide-up").click(function(){
@@ -32,7 +31,6 @@ $(document).ready(function(){
         $(".fade-function").fadeOut();
     })
     $("#fade-in").click(function(){
-        console.log("boop");
         $(".fade-function").fadeIn();
     })
     // div 8
