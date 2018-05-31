@@ -28,7 +28,7 @@ JOIN address ON address.address_id = customer.address_id
 WHERE customer.store_id = 1 AND address.city_id IN (1,42,312,459);
 
 # 5. What query would you run to get all the films with a "rating = G" and "special feature = behind the scenes", joined by actor_id = 15? Your query should return the film title, description, release year, rating, and special feature. Hint: You may use LIKE function in getting the 'behind the scenes' part.
-SELECT film_text.title,film_text.title,film.rating,film.special_features
+SELECT film_text.title,film_text.description,film.rating,film.special_features
 FROM actor
 JOIN film_actor ON film_actor.actor_id = actor.actor_id
 JOIN film ON film.film_id = film_actor.film_id
