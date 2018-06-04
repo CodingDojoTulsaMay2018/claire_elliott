@@ -1,8 +1,10 @@
 # Biggie Size - Given an array, write a function that changes all positive numbers in the array to "big". Example: makeItBig([-1, 3, 5, -5]) returns that same array, changed to [-1, "big", "big", -5].
 def make_it_big(arr):
-    for i in range(0, len(arr)):
-        if arr[i] > 0:
-            arr[i] = "big"
+    idx = 0
+    for i in arr:
+        if i > 0:
+          arr[idx] = "big"
+        idx += 1
     return arr
 
 # Count Positives - Given an array of numbers, create a function to replace last value with number of positive values. Example, countPositives([-1,1,1,1]) changes array to [-1,1,1,3] and returns it.  (Note that zero is not considered to b a positive number).
