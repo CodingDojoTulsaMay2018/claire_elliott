@@ -26,4 +26,22 @@ def iterateDict(students):
     for student in students:
         print(", ".join('{} - {}'.format(k, v) for k,v in student.items()))
 
-iterateDict(students)
+
+# 3. Create a function that given a list of dictionaries and a key name, it outputs the value stored in that key for each dictionary.  For example, iterateDictionary2('first_name', students) should output
+def iterKeys(key_name,dict_list):
+    for item in dict_list:
+        print(item[key_name])
+
+# 4. Create a function that prints the name of each location and also how many locations the Dojo currently has.  Have the function also print the name of each instructor and how many instructors the Dojo currently has.  For example, printDojoInfo(dojo) should output
+
+dojo = {
+   'location': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
+   'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
+}
+
+def printDojoInfo(dojo):
+    for item in dojo:
+        print('{} {}'.format((len(dojo[item])),item.upper()))
+        for i in dojo[item]:
+            print('{}'.format(i))
+        print("\n")
