@@ -63,5 +63,39 @@ class sortChangeTest(unittest.TestCase):
     def test5(self):
         self.assertNotEqual(sortChange(80),80)
 
+# 4.
+def factorial(num):
+    if num < 1:
+       return 1
+    else:
+       num = num * factorial(num - 1)
+       return num
+
+class factorialTest(unittest.TestCase):
+    def test1(self):
+        self.assertTrue(factorial(5),120)
+    def test2(self):
+        self.assertNotEqual(factorial(5),15)
+
+def fibonacci(num):
+    if num == 0:
+        fib_list = [0]
+        return fib_list
+    if num == 1:
+        fib_list = [0,1]
+        return fib_list
+    else:
+        fib_list = fibonacci(num-1)
+        fib_list.append(fib_list[-1] + fib_list[-2])
+        return fib_list
+
+class fibonacciTest(unittest.TestCase):
+    def test1(self):
+        self.assertTrue(fibonacci(0),[0])
+    def test2(self):
+        self.assertTrue(fibonacci(1),[0,1])
+    def test3(self):
+        self.assertNotEqual(fibonacci(5),[0,1,2,3,4,5])        
+
 if __name__ == '__main__':
     unittest.main()
