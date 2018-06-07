@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Playground</title>
+    <style>
+        h1 {
+            color: maroon;
+            margin-left: 40px;
+            display: block;
+            text-align: center;
+        }
+        #wrapper {
+            margin: 30px auto;
+            width: 1000px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 10px;
+        }
+        .container {
+            display: inline-grid;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Welcome!</h1>
+        <div class="grid">
+            {% for i in range(0,number) %}
+                <div class="container" style="background-color:{{color}};"></div>
+            {% endfor %}
+        </div>
+        
+    </div>
+</body>
+</html>
