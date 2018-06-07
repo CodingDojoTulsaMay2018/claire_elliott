@@ -8130,3 +8130,4 @@ python-stack/myEnvironments/py3Env/Scripts/isort.exe
 python-stack/myEnvironments/py3Env/Scripts/pylint.exe
 python-stack/myEnvironments/py3Env/Scripts/pyreverse.exe
 python-stack/myEnvironments/py3Env/Scripts/symilar.exe
+python-stack/myEnvironments/py3Env/Lib/encodings/__pycache__/unicode_escape.cpython-36.pyc
