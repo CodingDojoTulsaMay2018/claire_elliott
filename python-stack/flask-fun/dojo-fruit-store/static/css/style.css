@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    margin-bottom: 40px;
+}
+.lead{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+.table td {
+    vertical-align: middle;
+}
+.container-fluid{
+    padding: 0;
+}
+.jumbotron {
+    background: url('../img/jumbotron.jpg');
+    background-size: cover;
+    margin-bottom: 0;
+    height: 400px;
+}
+.checkout{
+    background: url();
+    background-color: #6ec6d4;
+}
+#info{
+    margin-top: 30px;
+}
