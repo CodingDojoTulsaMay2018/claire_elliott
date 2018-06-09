@@ -27,13 +27,16 @@
                     <div class="correct">
                         <h3>Wow, you got it!</h3>
                     </div>
+                    <form action="/process" method="post">
+                        <button class="btn btn-primary" type="submit" name="action" value="reset">Play Again</button>
+                    </form>
                 {% endif %}
-        
+                {% if session['guess'] != session['answer'] %}
                 <form action="/process" method="post">
                     <input class="form-control" type="text" name="player_guess">
                     <button class="btn btn-primary" type="submit" name="action" value="submit">Submit</button>
-                    <button class="btn btn-primary" type="submit" name="action" value="reset">Reset Game</button>
                 </form>
+                {% endif %}
         </div>
     </div>  
 </body>
