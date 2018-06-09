@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Counter</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <h1>Counter</h1>
+            {% if session['visits'] == 1 %}
+                <p>You've been here 1 time</p>
+                {% else %}
+                    <p>You've been here {{session['visits']}} times</p>
+                {% endif %}
+            <form action="/process" method="post">
+                <button class="btn btn-success" type="submit" name="action" value="add">Add 2 visits</button>
+                <button class="btn btn-danger" type="submit" name="action" value="reset">Reset</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
