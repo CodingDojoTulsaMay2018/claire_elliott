@@ -1,0 +1,43 @@
+body {
+    background-color: #ccc;
+}
+.container{
+    margin: 2em auto;
+    max-width: 1000px;
+}
+.main-content{
+    padding: 30px;
+    border-radius: 5px;
+    background-color: white;
+    margin: 0 auto;
+    width: 700px;
+}
+form{
+    margin-top: 2em;
+}
+h3{
+    padding-top: 2.5em;
+}
+.form-control{
+    margin: 0 auto 10px;
+    display: block;
+    width: 180px;
+}
+.high,
+.low,
+.correct{
+    color: white;
+    border-radius: 7px;
+    margin: 0 auto;
+    width: 200px;
+    height: 150px;
+}
+.high{
+    background-color: crimson;
+}
+.low{
+    background-color: skyblue;
+}
+.correct{
+    background-color: #568f56;
+}
