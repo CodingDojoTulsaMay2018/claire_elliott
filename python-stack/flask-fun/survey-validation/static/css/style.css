@@ -1,0 +1,37 @@
+h1 {
+    margin: .5em 0 1em;
+}
+button,
+.mx-auto a {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+span.badge {
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    padding: 15px;
+}
+p{
+    text-align: center;
+    font-weight: bold;
+}
+p.error{
+    font-weight: initial;
+    text-align: left;
+    margin: 0;
+    font-size: .7rem;
+    color: red;
+}
+.container {
+    max-width: 800px;
+}
+.form-group input {
+    margin-bottom: 20px;
+}
+.row {
+    margin-bottom: 70px;
+    padding: 20px;
+    background-color: #e2e2e2;
+}

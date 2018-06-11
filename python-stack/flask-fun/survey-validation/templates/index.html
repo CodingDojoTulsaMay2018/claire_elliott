@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz Time!!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}"/>
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-4 text-center">Do You Know Your Fugu?</h1>
+        
+        <form action="/results" method="post">
+            <div class="row">
+                <div class="col">
+                    <input name="fname" type="text" class="form-control" placeholder="First name" value"{{ request.form['fname'] }}">
+                    {% with messages = get_flashed_messages(category_filter=['fnameAlert']) %}
+                    {% if messages %}
+                    {% for message in messages %}
+                        <p class="error">{{message}}</p>
+                    {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                </div>
+                
+                <div class="col">
+                    <input name="lname" type="text" class="form-control" placeholder="Last name" value="{{ request.form['lname'] }}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="fugu_meaning">What does "fugu" mean in English?</label>
+                <input name="meaning" type="text" class="form-control" value="{{ request.form['meaning'] }}">
+            </div>
+            <div class="form-group">
+                <label for="toxin_name">What is the toxin found in fugu called?</label>
+                <input name="toxin" type="text" class="form-control" placeholder="scientific name"  value="{{ request.form['toxin'] }}">
+            </div>
+            <div class="form-group">
+                <label for="deaths_num">How many people a year die from eating fugu?</label>
+                <input name="deaths" type="text" class="form-control" placeholder="ex. 10 or 54"  value="{{ request.form['deaths'] }}">
+                {% with messages = get_flashed_messages(category_filter=['numericAlert']) %}
+                    {% if messages %}
+                    {% for message in messages %}
+                        <p class="error">{{message}}</p>
+                    {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </div>
+            <div class="form-group">
+                <label for="country_name">What country is fugu powder used to create zombification?</label>
+                <input name="country" type="text" class="form-control" value="{{ request.form['country'] }}">
+            </div>
+            <div class="mx-auto" style="width: 200px;">
+                    <button name="submit" type="submit" class="btn btn-secondary btn-lg">Get Results!</button>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
