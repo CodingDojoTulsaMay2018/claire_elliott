@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ninja Gold!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn">Your Gold: </button>
+                <button type="button" class="btn">{{ session['gold'] }}</button>
+            </div>
+        </header>
+        <div class="main-content">
+            <div class="option">
+                <h3>Farm</h3>
+                <p>(earns you 10-20 gold pieces)</p>
+                <form action="/process" method="post">
+                    <button class="btn btn-primary" type="submit" name="action" value="farm">Search Now!</button>
+                </form>
+            </div>
+            <div class="option">
+                <h3>Cave</h3>
+                <p>(earns you 5-10 gold pieces)</p>
+                <form action="/process" method="post">
+                    <button class="btn btn-primary" type="submit" name="action" value="cave">Search Now!</button>
+                </form>
+            </div>
+            <div class="option">
+                <h3>House</h3>
+                <p>(earns you loose changed)</p>
+                <form action="/process" method="post">
+                    <button class="btn btn-primary" type="submit" name="action" value="house">Search Now!</button>
+                </form>
+            </div>
+            <div class="option">
+                <h3>Casino</h3>
+                <p>(earns/removes 1-50 gold pieces)</p>
+                <form action="/process" method="post">
+                    <button class="btn btn-primary" type="submit" name="action" value="casino">Search Now!</button>
+                </form>
+            </div>
+        </div>
+        <h3>Activity Log</h3>
+        <div class="activity">
+            {% for i in session['activities'] %}
+                {% if 'lost' not in i %}
+                    <p class="win">{{ i }}</p>
+                {% else %}
+                <p class="lose">{{ i }}</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

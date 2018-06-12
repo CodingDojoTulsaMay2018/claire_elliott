@@ -1,0 +1,41 @@
+body{
+    margin-top: 3rem;
+}
+header{
+    margin:0 7px 2rem;
+}
+h3{
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+p{
+    margin-bottom: 15px;
+}
+.container{
+    width: 1000px;
+}
+.main-content{
+    text-align: center;
+    margin-bottom: 70px;
+}
+.option{
+    font-size: 10pt;
+    display: inline-block;
+    border-radius: 7px;
+    margin: 0 7px;
+    padding: 30px 10px;
+    width: 225px;
+    background-color: #ccc;
+}
+.activity{
+    border: 1px solid #ccc;
+    overflow-y: scroll;
+    height: 200px;
+    padding: 10px;
+}
+.win{
+    color: darkgreen;
+}
+.lose{
+    color: darkred;
+}
