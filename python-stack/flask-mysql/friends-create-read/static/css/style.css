@@ -1,0 +1,24 @@
+.container{
+    width: 800px;
+}
+h1 {
+    margin-bottom: 30px;
+}
+.form-control{
+    width: 300px;
+}
+.input-group{
+    width: 500px;
+}
+.table{
+    width: 500px;
+    font-size: .8rem;
+    margin-bottom: 4rem;
+}
+.table td{
+    padding: .5rem;
+}
+form {
+    width: 500px;
+    margin-top: 20px;
+}

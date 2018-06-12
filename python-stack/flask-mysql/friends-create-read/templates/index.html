@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Friends</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container mx-auto">
+        <h1>These are all my fraaands!</h1>
+        <table class="table table-striped mx-auto">
+            <thead class="thead-dark">
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Occupation</th>
+            </thead>
+            <tbody class="friend">
+                {% for friend in friends %}
+                    <tr>
+                        <td>{{ friend['first_name'] }}</td>
+                        <td>{{ friend['last_name'] }}</td>
+                        <td>{{ friend['occupation'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <h1>Add a new frand!</h1>
+        <form action="/create_friend" method="post" class="mx-auto">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">First Name</span>
+                </div>
+                <input type="text" class="form-control" name="fname">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Last Name</span>
+                </div>
+                <input type="text" class="form-control" name="lname">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Occupation</span>
+                </div>
+                <input type="text" class="form-control" name="occupation">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
