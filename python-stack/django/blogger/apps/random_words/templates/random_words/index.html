@@ -12,9 +12,9 @@
 <body>
     <div class="container">
             <h1>Random Word Generator</h1>
-            <p>Attempt # {{ counter }}</p>
+            <p>Attempt # {{ request.session.counter }}</p>
 
-            <h2>{{ word }}</h2>
+            <h2>{{ request.session.word }}</h2>
             <form action="/random/generate" method="post">
                 {% csrf_token %}
                 <button class="btn btn-secondary" type="submit">Generate</button>

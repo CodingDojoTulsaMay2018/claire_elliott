@@ -4,7 +4,7 @@ from django.utils.crypto import get_random_string
 def index(request):
     if 'counter' not in request.session:
         request.session['counter'] = 0
-    return render(request, 'random_words/index.html',context=request.session)
+    return render(request, 'random_words/index.html')
 
 def generate(request):
     if request.method == "POST":
