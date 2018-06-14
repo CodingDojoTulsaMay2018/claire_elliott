@@ -14,20 +14,20 @@ def index():
 def process():
     trigger = 0
     if not request.form['fname'].isalpha() or not request.form['lname'].isalpha():
-        flash("First and last name cannot contain numbers.", "nameAlert")
+        flash("First and last name cannot contain numbers", "nameAlert")
         trigger = 1
     if not EMAIL_REGEX.match(request.form['email']):
         flash("Invalid email address", "emailAlert")
         trigger = 1
     if request.form['initial_password'] != request.form['confirm_password']:
-        flash("Passwords do not match.", "passwordAlert")
+        flash("Passwords do not match", "passwordAlert")
         trigger = 1
     if len(request.form['initial_password']) < 8:
-        flash("Password must be more than 8 characters long.", "lengthAlert")
+        flash("Password must be more than 8 characters long", "lengthAlert")
         trigger = 1
     for value in request.form.values():
         if not len(value):
-            flash("All fields must be filled in.", "blankAlert")
+            flash("All fields must be filled in", "blankAlert")
             break
     if trigger == 1:
         return redirect('/')

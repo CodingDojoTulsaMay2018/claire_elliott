@@ -1,6 +1,6 @@
 .container{
     margin-top: 50px;
-    width: 800px;
+    width: 700px;
 }
 form{
     background-color: lightgray;
@@ -8,11 +8,15 @@ form{
     border-radius: 7px;
     margin-top: 30px;
 }
-.row{
+.form-row{
     margin-bottom: 20px;
 }
+.col{
+    display: inline-block;
+    width: 300px;
+}
 .error{
-    font-size: .7rem;
+    font-size: .9em;
     color: red;
 }
 .success{
