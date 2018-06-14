@@ -1,0 +1,48 @@
+body{
+    background-color: cadetblue;
+}
+header{
+    margin:0 10px 2rem;
+}
+h4{
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+p{
+    margin-bottom: 15px;
+}
+.container{
+    padding-top: 30px;
+    background-color: white;
+    width: 1000px;
+    height: 770px;
+}
+.main-content{
+    text-align: center;
+    margin-bottom: 70px;
+}
+.option{
+    font-size: 10pt;
+    display: inline-block;
+    border-radius: 7px;
+    margin: 0 7px;
+    padding: 30px 10px;
+    width: 220px;
+    background-color: #ccc;
+}
+.activity{
+    border: 1px solid #ccc;
+    overflow-y: scroll;
+    height: 200px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.activity p{
+    font-size: .8em;
+}
+.win{
+    color: darkgreen;
+}
+.lose{
+    color: darkred;
+}
