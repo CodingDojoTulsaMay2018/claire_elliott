@@ -1,0 +1,15 @@
+h2{
+    display: inline-block;
+    width: 50%;
+    padding: 35px;
+    margin: 20px;
+    background-color: cadetblue;
+    color: white;
+    border-radius: 7px;
+}
+
+.container{
+    margin-top: 30px;
+    text-align: center;
+    width: 800px;
+}
