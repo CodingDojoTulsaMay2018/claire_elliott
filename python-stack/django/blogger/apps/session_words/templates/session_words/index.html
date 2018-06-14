@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Session Words</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'session_words/css/style.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="container">
+            <h1>Add a New Word!</h1>
+            <form action="/session_words/generate" method="post">
+                {% csrf_token %}
+                <input class="form-control" name="new-word" type="text" placeholder="Type it out here">
+
+                <h4>Choose a Color</h4>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="color" value="red">
+                    <label class="form-check-label" for="color-red">Red</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="color" value="blue">
+                    <label class="form-check-label" for="color-blue">Blue</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="color" value="green">
+                    <label class="form-check-label" for="color-green">Green</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="bold">
+                    <label class="form-check-label" for="font-checkbox">Show in a BIG font!</label>
+                </div>
+                <button class="btn btn-info" type="submit">Add to Session</button>
+            </form>
+        </div>
+        <div class="container">
+            <div class="button">
+                <form action="/session_words/clear" method="post">
+                    {% csrf_token %}
+                    <button class="btn btn-danger" type="submit">Clear Session</button>
+                </form>
+            </div>
+            {% for word in inputs %}
+                {% if word.bold %}
+                    <p>
+                        <span class="{{ word.color }} bold">{{ word.word }}</span><span class="time"> - {{ word.time }}</span>
+                    </p>
+                {% else %}
+                    <p>
+                        <span class="{{ word.color }}">{{ word.word }}</span><span class="time"> - {{ word.time }}</span>
+                    </p>
+                {% endif %} 
+            {% endfor %}
+            <p>{{ words }}</p>
+        </div>
+    </div>
+</body>
+</html>

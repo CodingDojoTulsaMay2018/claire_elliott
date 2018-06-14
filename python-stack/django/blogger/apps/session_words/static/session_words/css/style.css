@@ -1,0 +1,48 @@
+#wrapper{
+    margin: 30px auto 0;
+    width: 1000px;
+}
+.container{
+    margin: 0 auto;
+    vertical-align: top;
+    max-width: 580px;
+    display: inline-block;
+}
+.container:nth-of-type(1){
+    padding: 20px;
+    max-width: 400px;
+    border-top-right-radius: 7px;
+    border-right: 2px solid #ccc;
+}
+.btn-danger,
+.btn-info{
+    margin: 20px 0;
+}
+.button{
+    margin-right: 0;
+    text-align: end;
+}
+input.form-control{
+    width: 300px;
+}
+h1{
+    margin-top: 0;
+}
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
+.green{
+    color: green;
+}
+.bold{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.time{
+    color: black;
+    font-weight: normal;
+    font-size: 1em;
+}
