@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     'apps.surveys',
     'apps.users',
     'apps.dojo_ninjas',
+    'apps.book_authors',
+    'apps.likes_books',
     'apps.user_logins',
     'django.contrib.admin',
     'django.contrib.auth',
