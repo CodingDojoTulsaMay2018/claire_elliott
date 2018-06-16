@@ -1,0 +1,45 @@
+h1,
+.table,
+.user-info {
+    margin-bottom: 2rem;
+}
+
+strong {
+    margin-right: 20px;
+}
+
+#wrapper {
+    width: 1000px;
+    margin: 2rem auto 0;
+}
+
+.table .thead-dark th {
+    color: black;
+    background-color: #ccc;
+    border-color: #ccc;
+}
+
+.user-info {
+    background-color: #ccc;
+    border-radius: 7px;
+    width: 70%;
+    padding: 30px;
+}
+
+.emphasis {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.show-table {
+    border-collapse: separate;
+    border-spacing: 15px 0;
+}
+
+.form-control {
+    width: 75%;
+}
+
+.go-back {
+    font-size: .8rem;
+}
