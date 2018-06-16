@@ -4,7 +4,11 @@ from django.db import models
 class UserManager(models.Manager):
     def basic_validator(self, postData):
         errors = []
-        pass
+        if len(postData['first_name']) < 2 or len(postData['last_name']) < 2:
+            errors.append("Please enter a valid name")
+        if len(postData['email']) < 3:
+            errors.append("Please enter a valid email address")
+        return errors
 
 
 class User(models.Model):

@@ -26,6 +26,9 @@ strong {
     padding: 30px;
 }
 
+.messages{
+    color: red;
+}
 .emphasis {
     font-weight: bold;
     text-transform: uppercase;
