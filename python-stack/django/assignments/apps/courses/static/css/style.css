@@ -1,0 +1,42 @@
+.table,
+.btn{
+    margin-bottom: 3em;
+}
+.confirm{
+    width: 700px;
+}
+.table .thead-dark th{
+    color: black;
+    background-color: #ccc;
+    border-color: #ccc;
+    border-bottom: 4px solid #888;
+}
+.datetime,
+.description{
+    font-size: .8rem;
+}
+td.description{
+    width: 550px;
+}
+td.name{
+    width: 225px;
+}
+.actions{
+    text-align: center;
+}
+.form-control{
+    width: 50%;
+}
+.messages{
+    color: red;
+}
+.btn .btn-dark{
+    margin-right: 10px;
+}
+.inline-block{
+    display: inline-block;
+}
+.emphasis {
+    font-weight: bold;
+    text-transform: uppercase;
+}

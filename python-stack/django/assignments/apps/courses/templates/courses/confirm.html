@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodingDojo Courses</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="container confirm">
+            <h2>Confirm Deletion</h2>
+            <p>Are you sure you want to delete the following course?</p>
+            <table class="table table-borderless">
+                <tbody>
+                    <tr>
+                        <td class="emphasis">Name</td>
+                        <td>{{ course.name }}</td>
+                    </tr>
+                    <tr>
+                        <td class="emphasis">Description</td>
+                        <td>{{ course.description }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <form action="/courses" method="get" class="inline-block">
+                <button type="submit" class="btn btn-dark">No</button>
+            </form>
+            <form action="/courses/destroy/{{ course.id }}" method="post" class="inline-block">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Yes! I want to delete this</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
