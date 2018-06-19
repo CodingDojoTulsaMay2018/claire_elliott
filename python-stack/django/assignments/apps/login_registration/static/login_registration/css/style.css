@@ -1,0 +1,14 @@
+#wrapper{
+    margin-top: 3em;
+    width: 1000px;
+    margin: 3rem auto 0;
+}
+.register,
+.login{
+    display: inline-block;
+    max-width: 45%;
+    vertical-align: top;
+}
+.register{
+    margin-right: 50px;
+}
