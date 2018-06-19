@@ -1,0 +1,15 @@
+h1,
+h4{
+    margin-bottom: 2rem;
+}
+.container{
+    width: 900px;
+}
+.table .thead-dark th{
+    background-color: #888;
+    border-top: none;
+    border-bottom: 4px solid #464646;
+}
+.custom-select{
+    width: 100px;
+}

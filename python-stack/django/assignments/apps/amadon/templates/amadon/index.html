@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amadon</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'amadon/css/style.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        <div class="container">
+            <h1>Dazzlin' Rick's Blow-Out Extravaganza</h1>
+            <table class="table table-sm table-hover">
+                <thead class="thead-dark text-center">
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </thead>
+                <tbody>
+                <form action="/amadon/buy" method="post">
+                    {% csrf_token %}
+                    {% for item in items %}
+                        <tr>
+                            <td>{{item.name}}</td>
+                            <td class="text-right">{{item.price}}</td>
+                            <td class="text-right">
+                                <select name="quantity_id_{{item.id}}" class="custom-select form-control-sm">
+                                    <option selected value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <button class="btn btn-info btn-sm" type="submit">Purchase</button>
+        </form>
+        </div>
+    </div>
+</body>
+</html>
