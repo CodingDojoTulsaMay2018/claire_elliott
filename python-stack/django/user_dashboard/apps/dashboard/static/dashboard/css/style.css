@@ -1,0 +1,117 @@
+#wrapper{
+    margin-top: 100px;
+}
+.welcome-message{
+    color: white;
+    margin-right: 20px;
+}
+.profile-info{
+    min-height: 500px;
+    padding: 20px;
+    background-color: #ccc;
+    width: 50%;
+    border-radius: 7px;
+    font-size: .8rem;
+}
+.profile-pic{
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    background-color: #888;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.profile-name{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+.table{
+    margin-bottom: 2rem;
+}
+.post-box{
+    border-radius: 7px;
+    max-width: 400px;
+    margin: 20px;
+    margin-bottom: 50px;
+    background: #17a2b8;
+    padding: 20px;
+    text-align: justify;
+    font-weight: 500;
+    color: #fff;
+    font-family: arial;
+    position: relative;
+}
+.description-box{
+    border-radius: 7px;
+    max-width: 400px;
+    margin: 20px;
+    margin-bottom: 50px;
+    background: #17a2b8;
+    padding: 20px;
+    text-align: justify;
+    font-weight: 500;
+    color: #fff;
+    font-family: arial;
+    position: relative;
+}
+.comment-box{
+    border-radius: 7px;
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    margin-left: 150px;
+    background: #ccc;
+    padding: 20px;
+    font-size: .8rem;
+    position: relative;
+}
+.bottom:before{
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid #ccc;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #ccc;
+    border-bottom: 10px solid transparent;
+    left: 19px;
+    bottom: -19px;
+  }
+  .top:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-right: 10px solid #17a2b8;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid #17a2b8;
+    border-top: 10px solid transparent;
+    left: 19px;
+    top: -19px;
+  }
+.edit-form{
+    border-radius: 7px;
+    padding: 20px;
+    background-color: #ccc;
+}
+.col-sm{
+    padding-right: 60px;
+}
+.posts {
+    margin-top: 100px;
+}
+.posts textarea{
+    margin-top: 50px;
+    width: 60%;
+}
+.post-wall span{
+    font-size: .7rem;
+    margin-left: 160px;
+}
+.comment-button{
+    margin-bottom: 20px;
+}

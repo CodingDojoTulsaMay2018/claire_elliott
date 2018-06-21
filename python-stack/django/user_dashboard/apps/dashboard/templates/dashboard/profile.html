@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CodingDojo Profile</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
+    </head>
+
+    <body>
+    <div id="wrapper">
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <span class="navbar-brand" id="home">CodingDojo</span>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#home">Top</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/dashboard">Home</a>
+                        </li>
+                    </ul>
+                    <span class="welcome-message">Welcome back, {{request.session.welcome_name}}!</span>
+                    <a href="/logout" class="badge badge-info">Log out</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+        <div class="container main-content">
+            <div class="row">
+                <div class="col-lg-4 profile-info mx-auto">
+                    <div class="affix">
+                        <div class="class profile-pic"></div>
+                        <p class="profile-name text-center">{{profile.first_name}} {{profile.last_name}}
+                            {% if profile.id == this_user.id %}
+                                <a href="/users/edit/{{profile.id}}" class="badge badge-light text-center">Edit</a>
+                            {% endif %}
+                        </p>
+                        
+                        <table class="table table-borderless table-sm">
+                            <tbody>
+                                <tr>
+                                    <td>Registered at</td>
+                                    <td>{{profile.created_at}}</td>
+                                </tr>
+                                <tr>
+                                    <td>User ID</td>
+                                    <td>#{{profile.id}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td>#{{profile.email}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="description-box top">{{profile.description}}</div>
+                    </div>
+                </div>
+                <div class="col-lg-7 post-wall">
+                    <h1>Post a Message</h1>
+                    <form action="/post" method="post">
+                        {% csrf_token %}
+                        <textarea name="post" cols="70" rows="5"></textarea>
+                        <input type="hidden" name="user_id" value="{{profile.id}}">
+                        <button name="submit_post" class="btn btn-info float-right" type="submit">Submit</button>
+                    </form>
+                    {% for post in posts reversed %}
+                        {% if post.posted_to_id == profile.id %}
+                        <div class="container posts">
+                                <hr>
+                            <lead>{{post.posted_by.first_name}} @ {{post.created_at}}</lead>
+                            <div class="post-box top">
+                                {{post.message}}
+                            </div>
+                            {% for comment in comments %}
+                                {% if comment.posted_under_id == post.id %}
+                                    <div class="comment-box">
+                                        {{comment.comment}}
+                                    </div>
+                                    <span>{{comment.commented_by.first_name}} @ {{comment.created_at}}</span>
+                                {% endif %}
+                            {% endfor %}
+                            <form action="/comment" class="text-right" method="post">
+                                {% csrf_token %}
+                                <textarea name="comment" cols="50" rows="1"></textarea>
+                                <input type="hidden" name="post_id" value="{{post.id}}">
+                                <input type="hidden" name="user_id" value="{{profile.id}}">
+                                <button class="btn btn-primary btn-sm comment-button" type="submit">Add Comment</button>
+                            </form>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
