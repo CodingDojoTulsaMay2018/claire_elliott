@@ -24,7 +24,7 @@
                                 <a class="nav-link" href="#home">Top</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="/">Home</a>
+                                <a class="nav-link" href="/dashboard">Home</a>
                             </li>
                         </ul>
                         <span class="welcome-message">Welcome back, {{request.session.welcome_name}}!</span>
@@ -61,6 +61,12 @@
                             <label for="email">Email</label>
                             <input type="text" class="form-control form-control-sm" name="email" value="{{user.email}}">
                         </div>
+                        {% if this_user.id == user.id %}
+                        <div class="form-group">
+                            <label for="email">Description</label>
+                            <textarea type="text" class="form-control form-control-sm" name="description">{{user.description}}</textarea>
+                        </div>
+                        {% endif %}
                         <div class="form-group">
                             <label for="user_level">User Level</label>
                             <select class="custom-select" name="level">

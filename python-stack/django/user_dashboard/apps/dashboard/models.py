@@ -37,8 +37,6 @@ class UserManager(models.Manager):
             errors.append("First name cannot contain numbers or special characters")
         if not re.match(EMAIL_REGEX, postData['email']):
             errors.append("A valid email address is required")
-        if postData['description'] == '':
-            errors.append("Description cannot be blank")
         return errors
     
     def password_validation(self, postData):

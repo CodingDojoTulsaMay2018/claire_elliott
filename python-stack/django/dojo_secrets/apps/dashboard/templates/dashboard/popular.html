@@ -11,30 +11,53 @@
 </head>
 <body>
     <div id="wrapper">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Dojo Secrets</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/secrets">Home</a>
+                            </li>
+                        </ul>
+                        <a href="/logout" class="badge badge-info">Log Out</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
         <div class="container">
             <h2>Most Popular Secrets</h2>
-
             <div class="row">
                 {% for secret in popular %}
                 <div class="col-lg-4 d-flex align-items-stretch">
                     <div class="card text-white bg-info mb-3" style="width: 18rem;">
-                        <div class="card-body">
+                        <div class="card-body secrets">
                             <h5 class="card-title">Secret #{{secret.id}}</h5>
                             <p class="card-text">{{secret.message}}</p>
                             <button type="button" class="btn btn-secondary btn-sm">
                                 <span class="badge badge-light">{{secret.liked_by.count}}</span> Likes
                             </button>
-                            <form action="/like" method="post">
-                                {% csrf_token %}
-                                <input type="hidden" name="secret_id" value="{{secret.id}}">
-                                <button type="submit" class="btn btn-dark btn-sm">Like this</a>
-                            </form>
+                            {% if secret.posted_by.id != this_user.id and this_user not in secret.liked_by.all %}
+                                <form action="/like" method="post">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="secret_id" value="{{secret.id}}">
+                                    <button type="submit" class="btn btn-dark btn-sm">Like this</button>
+                                </form>
+                            {% elif secret.posted_by.id == this_user.id %}
+                                <a class="btn btn-dark btn-sm" href="/destroy/{{secret.id}}">Delete</a>
+                            {% else %}
+                                <span class="text-white">You've liked this!</span>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
                 {% endfor %}
             </div>
-            
         </div>
     </div>
 </body>

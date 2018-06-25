@@ -38,7 +38,7 @@
                 <div class="col-lg-4 profile-info mx-auto">
                     <div class="affix">
                         <div class="class profile-pic"></div>
-                        <p class="profile-name text-center">{{profile.first_name}} {{profile.last_name}}
+                        <p class="profile-name">{{profile.first_name}} {{profile.last_name}}
                             {% if profile.id == this_user.id %}
                                 <a href="/users/edit/{{profile.id}}" class="badge badge-light text-center">Edit</a>
                             {% endif %}

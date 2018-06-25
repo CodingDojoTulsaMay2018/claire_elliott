@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import Secret, User, UserManager
 import bcrypt
+from django.db.models import Count
+
 
 def index(request):
     if 'email' in request.session:
@@ -61,7 +63,7 @@ def popular_secrets(request):
         context = {
             "this_user" : User.objects.get(email=request.session['email']),
             "secrets" : Secret.objects.all(),
-            "popular" : Secret.objects.order_by('-liked_by')
+            "popular" : Secret.objects.annotate(num_likes=Count('liked_by')).order_by('-num_likes')
         }
         return render(request, 'dashboard/popular.html', context)
 
@@ -71,6 +73,14 @@ def like(request):
     this_secret.liked_by.add(this_user)
     this_secret.save()
     return redirect('/secrets/popular')
+
+def destroy(request,id):
+    this_secret = Secret.objects.get(id=id)
+    this_user = User.objects.get(email=request.session['email'])
+    if this_user.id == this_secret.posted_by.id:
+        destroy_secret = Secret.objects.get(id=id)
+        destroy_secret.delete()
+    return redirect('/')
 
 def logout(request):
     request.session.clear()

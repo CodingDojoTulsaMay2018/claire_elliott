@@ -11,7 +11,24 @@
 </head>
 <body>
     <div id="wrapper">
-
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Dojo Secrets</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/secrets">Home</a>
+                            </li>
+                        </ul>
+                        <a href="/logout" class="badge badge-info">Log Out</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
         <div class="container">
             <div class="jumbotron">
                 <h1 class="display-4">Hello, {{request.session.welcome_name}}</h1>
@@ -31,9 +48,25 @@
                     <div class="card-header bg-secondary text-white">Recent Secrets</div>
                     <div class="card-body">
                         <p class="card-text">Stay up-to-date with the latest secrets posted!</p>
-                        {% for secret in secrets reversed %}
-                            <p>{{secret.message}}</p>
-                        {% endfor %}
+                        <ul>
+                            {% for secret in secrets reversed %}
+                                {% if forloop.counter < 5 %}
+                                    <li>{{secret.message}}
+                                        {% if secret.posted_by.id != this_user.id and this_user not in secret.liked_by.all %}
+                                            <form action="/like" method="post">
+                                                {% csrf_token %}
+                                                <input type="hidden" name="secret_id" value="{{secret.id}}">
+                                                <button type="submit" class="btn btn-dark btn-sm">Like this</button>
+                                            </form></li>
+                                        {% elif secret.posted_by.id == this_user.id %}
+                                            <a class="badge badge-danger" href="/destroy/{{secret.id}}">Delete</a>
+                                            </li>
+                                        {% else %}
+                                        </li>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
                     </div>
                     </div>
                 </div>

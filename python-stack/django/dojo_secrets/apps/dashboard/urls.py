@@ -9,5 +9,6 @@ urlpatterns = [
     url(r'^post$', views.post),
     url(r'^secrets/popular$', views.popular_secrets),
     url(r'^like$', views.like),
+    url(r'^destroy/(?P<id>\d+)$', views.destroy),
     url(r'^logout$', views.logout)
 ]

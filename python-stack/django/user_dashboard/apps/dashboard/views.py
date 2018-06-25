@@ -100,6 +100,8 @@ def comment(request):
 def edit(request, id):
     if 'email' not in request.session:
         return redirect('/')
+    elif User.objects.get(email=request.session['email']) != 9 and User.objects.get(email=request.session['email']) != User.objects.get(id=id):
+        return redirect('/dashboard')
     else:
         context = {
             "this_user" : User.objects.get(email=request.session['email']),
@@ -109,6 +111,7 @@ def edit(request, id):
 
 def update(request, id):
         edit_user = User.objects.get(id=id)
+        this_user = User.objects.get(email=request.session['email'])
         errors = User.objects.edit_validation(request.POST)
         if len(errors):
             for message in errors:
@@ -118,8 +121,13 @@ def update(request, id):
             edit_user.first_name = request.POST['first_name']
             request.session['welcome_name'] = request.POST['first_name']
             edit_user.last_name = request.POST['last_name']
-            edit_user.email = request.POST['email']
-            edit_user.description = request.POST['description']
+            if this_user.email == request.session['email']:
+                edit_user.email = request.POST['email']
+                request.session['email'] = request.POST['email']
+            else:
+                edit_user.email = request.POST['email']
+            if this_user.level != 9 or this_user.id == edit_user.id:
+                edit_user.description = request.POST['description']
             if 'user_level' in request.POST:
                 edit_user.level = request.POST['user_level']
             edit_user.save()
