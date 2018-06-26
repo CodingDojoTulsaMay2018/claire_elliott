@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Ajax Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> 
+  </head>
+  <body>
+    <div class="container">
+        <h1>My Posts</h1>
+        <div id='all-posts' class="container">
+        </div>
+        <form action="create" method="post" id="ajax_create_post">
+            {% csrf_token %}
+            <textarea name="message" cols="30" rows="5" style="display:block; margin-bottom: 10px;"></textarea>
+            <button id='add_post' type="submit" class='btn btn-primary'>Add Post</button>
+        </form>
+
+        <script>
+            $( document ).ready(function() {
+                $.ajax({
+                    url: '/posts/snippet.html', /* Where should this go? */
+                    success: function(serverResponse) {  /* What code should we run when the server responds? */
+                      console.log("Received this from server:", serverResponse)
+                      $('#all-posts').html(serverResponse)
+                    }
+                });
+            });
+            $('#ajax_create_post').submit(function(e){
+                e.preventDefault()
+                console.log('Sending Ajax request to', $(this).attr('action'))
+                console.log('Submitting the following data', $(this).serialize())
+                $.ajax({
+                url: $(this).attr('action'),
+                method: 'post',
+                data: $(this).serialize(),
+                success: function(serverResponse) {
+                    $('#all-posts').html(serverResponse)
+                }
+                })
+            });
+        </script>
+    </div>
+    
+  </body>
+</html>
