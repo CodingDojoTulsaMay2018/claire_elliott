@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID #</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Registered at</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for lead in leads %}
+            <tr>
+                <td>{{lead.id}}</td>
+                <td>{{lead.first_name}}</td>
+                <td>{{lead.last_name}}</td>
+                <td>{{lead.created_at}}</td>
+                <td>{{lead.email}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
