@@ -11,13 +11,13 @@ class UserManager(models.Manager):
             errors['register password match'] = "Passwords do not match"
         if len(postData['initial_pw']) < 8 or len(postData['confirm_pw']) < 8:
             errors['register password length'] = "Password must be at least 8 characters"
-        if User.objects.filter(username=postData['email']).exists():
+        if User.objects.filter(email=postData['email']).exists():
             errors['register email dupe'] = "Email has already been registered"
         if User.objects.filter(username=postData['username']).exists():
             errors['register username dupe'] = "Username has already been registered"
         if len(postData['username']) < 3 or len(postData['username']) > 30:
             errors['register username length'] = "Username must be at least 3 characters and no more than 30"
-        if not postData['username'].isalnum() or postData['username'].islower():
+        if not postData['username'].isalnum() or not postData['username'].islower():
             errors['register username string'] = "Username can only contain numbers and lowercase letters"
         if not postData['birthdate']:
             errors['register date blank'] = "Birthdate cannot be blank"

@@ -15,40 +15,85 @@
 <body>
     <div id="wrapper">
         <div class="container-fluid">
-                <div id="overlay">
+                <div id="login-overlay">
                     <div class="overlay-content">
                         <h1>Register</h1>
-                        <form action="{% url 'login_regs:register' %}" method="post">
+                        {% if messages %}
+                            <ul class="messages">
+                                {% for message in messages %}
+                                    {% if 'login' in message.tags %}
+                                        <li>{{ message }}</li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        <form action="{% url 'login_regs:login' %}" method="post">
+                            {% csrf_token %}
                             <div class="form-row">
-                                <div class="col">
-                                    <input type="text" class="form-control" name="username" placeholder="Username">
-                                </div>
-                                <div class="col">
-                                    <input type="text" class="form-control" name="email" placeholder="Email address">
-                                </div>
+                                <input type="text" class="form-control" name="username" placeholder="Username">
+                                <input type="password" class="form-control" name="password" placeholder="password">
                             </div>
-                            <label for="gender">Gender</label>
-                            <select class="custom-select">
-                                <option selected>Choose...</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                                <option value="other">Other</option>
-                                <option value="not stating">Not Stating</option>
-                            </select>
-                            <small id="inputHelp" class="form-text text-muted">For statistical data only</small>
+                            <button class="btn btn-info" type="submit">Login</button>
+                            <a href='#' class="btn btn-secondary" onclick='loginOverlay()'>Cancel</a>
                         </form>
-                        Click here to [<a href='#' onclick='overlay()'>close</a>]
+                    </div>
+                </div>
+
+                <div id="register-overlay">
+                    <div class="overlay-content">
+                        <h1>Register</h1>
+                        {% if messages %}
+                            <ul class="messages">
+                                {% for message in messages %}
+                                    {% if 'register' in message.tags %}
+                                        <li>{{ message }}</li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        <form action="{% url 'login_regs:register' %}" method="post">
+                            {% csrf_token %}
+                            <div class="form-row">
+                                <input type="text" class="form-control" name="username" placeholder="Username">
+                                <input type="text" class="form-control" name="email" placeholder="Email address">
+                                <div class="col">
+                                    <label for="gender">Gender</label>
+                                    <select class="custom-select" name="gender">
+                                        <option selected>Choose...</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="other">Other</option>
+                                        <option value="not stating">Not Stating</option>
+                                    </select>
+                                    <small id="inputHelp" class="form-text text-muted">For statistical purposes only</small>
+                                </div>
+                                <div class="col">
+                                    <label for="gender">Birthdate</label>
+                                    <input type="date" name="birthdate" class="form-control">
+                                </div>
+                                <input type="password" class="form-control" name="initial_pw" placeholder="Password">
+                                <input type="password" class="form-control" name="confirm_pw" placeholder="Confirm password">
+                            </div>
+                            <button class="btn btn-info" type="submit">Register</button>
+                            <a href='#' class="btn btn-secondary" onclick='registerOverlay()'>Cancel</a>
+                        </form>
                     </div>
                 </div>
             <div class="buttons">
-                <a href="#" class="btn btn-secondary" onclick="overlay()">Login</a>
-                <a href="#" class="btn btn-dark">Register</a>
+                <h2 class="display-2 text-center text-white">PLACEHOLDER</h2>
+                <a href="#" class="btn btn-secondary" onclick="loginOverlay()">Login</a>
+                <a href="#" class="btn btn-dark" onclick="registerOverlay()">Register</a>
             </div>
         </div>
     </div>
     <script>
-        function overlay() {
-            el = document.getElementById("overlay");
+        function loginOverlay() {
+            el = document.getElementById("login-overlay");
+            el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+        }
+
+        function registerOverlay() {
+            el = document.getElementById("register-overlay");
             el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
         }
     </script>

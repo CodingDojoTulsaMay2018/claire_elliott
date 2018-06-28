@@ -10,7 +10,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     {% load static %}
     <link rel="stylesheet" href="{% static 'login_registration/css/normalize.css' %}">
-    <link rel="stylesheet" href="{% static 'dashboard/css/lc_switch.css' %}">
     <link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
     
 </head>
@@ -36,8 +35,7 @@
                         <a class="nav-link" href="#">Pricing</a>
                     </li>
                     </ul>
-                    <div class="lcs_wrap"><input type="checkbox" name="check-3" value="6" class="lcs_check lcs_tt1" checked="checked" autocomplete="off"><div class="lcs_switch  lcs_on lcs_checkbox_switch"><div class="lcs_cursor"></div><div class="lcs_label lcs_label_on">ONLINE</div><div class="lcs_label lcs_label_off">OFFLINE</div></div></div>
-                    <a class="btn btn-info btn-sm text-white">
+                    <a class="btn btn-info btn-sm text-white" href="{% url 'dashboard:logout' %}">
                     Log out
                     </a>
                 </div>

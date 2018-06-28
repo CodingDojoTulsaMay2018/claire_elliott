@@ -10,6 +10,16 @@ h1{
     padding: 10px;
     border: 1px solid #252525;
 }
+h2{
+    margin-bottom: 1em;
+}
+form{
+    padding: 20px;
+}
+ul{
+    margin-top: 10px;
+    margin-bottom: 0;
+}
 #wrapper{
     margin: 20vh auto;
 }
@@ -26,16 +36,15 @@ h1{
     text-align: center;
     display: table-cell;
     vertical-align: bottom;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
-.btn{
-    margin-top: 40px;
-}
+
 .form-control,
 #inputHelp{
     margin-bottom: 5px;
 }
-#overlay {
+#login-overlay,
+#register-overlay {
     visibility: hidden;
     position: absolute;
     left: 0px;
@@ -44,10 +53,14 @@ h1{
     height:100%;
     z-index: 1000;
 }
-#overlay .overlay-content{
+.overlay-content{
     width:500px;
     margin: 100px auto;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0px 0px 30px #000;
+}
+.messages{
+    color: red;
+    font-size: .7rem;
 }
