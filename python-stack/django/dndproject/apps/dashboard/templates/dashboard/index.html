@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login_registration/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboard/css/lc_switch.css' %}">
+    <link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
+    
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <img src="{% static 'dashboard/img/spiked-dragon-head.png' %}">
+                <a class="navbar-brand h1" href="#">PLACEHOLDER</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Campaigns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Characters</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    </ul>
+                    <div class="lcs_wrap"><input type="checkbox" name="check-3" value="6" class="lcs_check lcs_tt1" checked="checked" autocomplete="off"><div class="lcs_switch  lcs_on lcs_checkbox_switch"><div class="lcs_cursor"></div><div class="lcs_label lcs_label_on">ONLINE</div><div class="lcs_label lcs_label_off">OFFLINE</div></div></div>
+                    <a class="btn btn-info btn-sm text-white">
+                    Log out
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header><!-- /HEADER -->
+    <div id="wrapper">
+        <!-- MAIN CONTENT -->
+        <div class="container">
+            <!-- CAMPAIGNS -->
+            <div class="campaigns">
+                <h3 class="display-4 text-white">Your Campaigns</h3>
+                <figure class="campaign-dash text-white">
+                    <img src="{% static 'dashboard/img/dragon-orb.png' %}">
+                    <figcaption>Campaign Name</figcaption>
+                </figure>
+                <figure class="campaign-dash text-white">
+                    <img src="{% static 'dashboard/img/mimic-chest.png' %}">
+                    <figcaption>Campaign Name</figcaption>
+                </figure>
+                <figure class="campaign-dash text-white">
+                    <img src="{% static 'dashboard/img/interceptor-ship.png' %}">
+                    <figcaption>Campaign Name</figcaption>
+                </figure>
+            </div><!-- /CAMPAIGNS -->
+            <!-- CHARACTERS -->
+            <div class="characters">
+                <h3 class="display-4 text-white">Your Characters</h3>
+                <figure class="character-dash text-white">
+                    <img src="{% static 'dashboard/img/darwin-icon.png' %}">
+                    <figcaption>Darwin</figcaption>
+                </figure>
+            </div><!-- /CHARACTERS -->
+        </div><!-- /MAIN CONTENT -->
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+body,
+h1{
+    background-color: #252525;
+}
+h1{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #252525;
+}
+#wrapper{
+    margin: 20vh auto;
+}
+.container-fluid{
+    background: url('../img/carousel_004.jpg');
+    height: 60vh;
+    background-size: cover;
+    margin: 0 auto;
+    display: table;
+    opacity: 0.7;
+}
+.container-fluid .buttons{
+    bottom: 10px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: bottom;
+    padding-bottom: 30px;
+}
+.btn{
+    margin-top: 40px;
+}
+.form-control,
+#inputHelp{
+    margin-bottom: 5px;
+}
+#overlay {
+    visibility: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width:100%;
+    height:100%;
+    z-index: 1000;
+}
+#overlay .overlay-content{
+    width:500px;
+    margin: 100px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px #000;
+}
