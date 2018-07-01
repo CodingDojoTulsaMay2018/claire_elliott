@@ -1,0 +1,39 @@
+<h3 class="text-center">MY NOTES</h3>
+<div class="container">
+    <form action="/campaigns/add_note" method="post" id="add_note">
+        {%csrf_token%}
+        <div class="input-group mb-3">
+            <textarea class="form-control" name="message" id="message-area"></textarea>
+            <div class="input-group-append">
+                <button class="btn btn-secondary" type="submit">Add Note</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div id="all_notes" class="container">
+</div>
+<script>
+    $('#add_note').submit(function(e){
+        e.preventDefault()
+        console.log('Sending Ajax request to', $(this).attr('action'))
+        console.log('Submitting the following data', $(this).serialize())
+        $.ajax({
+        url: $(this).attr('action'),
+        method: 'post',
+        data: $(this).serialize(),
+        success: function(serverResponse) {
+            $('#all_notes').html(serverResponse)
+            $("#message-area").val('');
+        }
+        })
+    });
+    $( document ).ready(function() {
+        $.ajax({
+            url: '/campaigns/snippet.html', /* Where should this go? */
+            success: function(serverResponse) {  /* What code should we run when the server responds? */
+              console.log("Received this from server:", serverResponse)
+              $('#all_notes').html(serverResponse)
+            }
+        });
+    });
+</script>

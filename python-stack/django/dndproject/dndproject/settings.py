@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'apps.characters',
+    'apps.campaigns',
     'apps.login_registration',
     'apps.dashboard',
     'django.contrib.admin',

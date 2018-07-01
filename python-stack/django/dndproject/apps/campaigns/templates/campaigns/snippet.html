@@ -1,0 +1,26 @@
+{% for note in my_notes reversed %}
+    <div class="container user-note">
+        <p class="text-right datetime">{{note.created_at}}</p>
+        <p>{{note.message}}</p>
+        <a id="delete{{note.id}}" class="badge badge-dark">Delete</a>
+    </div>
+    <script>
+            $('#delete{{note.id}}').click(function(e){
+                e.preventDefault()
+                $.ajax({
+                    url: '/campaigns/destroy/{{note.id}}',
+                    success: function(serverResponse) {
+                        console.log("Received this from server:", serverResponse)
+                        $('#user-note').html(serverResponse)
+                    }
+                });
+                $.ajax({
+                    url: '/campaigns/snippet.html', /* Where should this go? */
+                    success: function(serverResponse) {  /* What code should we run when the server responds? */
+                      console.log("Received this from server:", serverResponse)
+                      $('#all_notes').html(serverResponse)
+                    }
+                });
+            });
+    </script>
+{%endfor%}

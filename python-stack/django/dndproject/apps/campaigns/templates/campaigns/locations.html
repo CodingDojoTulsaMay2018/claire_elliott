@@ -1,0 +1,25 @@
+<h3 class="text-center">LOCATIONS</h3>
+<div class="container">
+    <div class="accordion" id="location-accordian">
+        {% for location in locations %}
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{location.id}}" aria-expanded="true" aria-controls="collapseOne">
+                    {{location.name}}
+                    </button>
+                </h5>
+            </div>
+        
+            <div id="collapse{{location.id}}" class="collapse show" data-parent="#location-accordian">
+            <div class="card-body">
+                {{location.desc|linebreaks}}
+            </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<script>
+    $('.collapse').collapse()
+</script>
