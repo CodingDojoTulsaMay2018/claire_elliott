@@ -32,9 +32,11 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'apps.courses',
+    'apps.posts',
     'apps.amadon',
     'apps.login_registration',
     'apps.the_wall',
+    'apps.searches',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
