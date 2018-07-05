@@ -1,0 +1,11 @@
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\SLL\bin\Debug\netcoreapp2.0\SLL.deps.json
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\SLL\bin\Debug\netcoreapp2.0\SLL.runtimeconfig.json
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\SLL\bin\Debug\netcoreapp2.0\SLL.runtimeconfig.dev.json
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\SLL\bin\Debug\netcoreapp2.0\SLL.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\SLL\bin\Debug\netcoreapp2.0\SLL.pdb
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\SLL\obj\Debug\netcoreapp2.0\SLL.csprojResolveAssemblyReference.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\SLL\obj\Debug\netcoreapp2.0\SLL.csproj.CoreCompileInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\SLL\obj\Debug\netcoreapp2.0\SLL.AssemblyInfoInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\SLL\obj\Debug\netcoreapp2.0\SLL.AssemblyInfo.cs
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\SLL\obj\Debug\netcoreapp2.0\SLL.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\SLL\obj\Debug\netcoreapp2.0\SLL.pdb

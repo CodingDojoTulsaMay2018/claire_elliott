@@ -1,0 +1,11 @@
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\WizardNinjaSamurai\obj\Debug\netcoreapp2.0\WizardNinjaSamurai.csprojResolveAssemblyReference.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\WizardNinjaSamurai\obj\Debug\netcoreapp2.0\WizardNinjaSamurai.csproj.CoreCompileInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\WizardNinjaSamurai\obj\Debug\netcoreapp2.0\WizardNinjaSamurai.AssemblyInfoInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\WizardNinjaSamurai\obj\Debug\netcoreapp2.0\WizardNinjaSamurai.AssemblyInfo.cs
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\WizardNinjaSamurai\bin\Debug\netcoreapp2.0\WizardNinjaSamurai.deps.json
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\WizardNinjaSamurai\bin\Debug\netcoreapp2.0\WizardNinjaSamurai.runtimeconfig.json
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\WizardNinjaSamurai\bin\Debug\netcoreapp2.0\WizardNinjaSamurai.runtimeconfig.dev.json
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\WizardNinjaSamurai\bin\Debug\netcoreapp2.0\WizardNinjaSamurai.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\WizardNinjaSamurai\bin\Debug\netcoreapp2.0\WizardNinjaSamurai.pdb
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\WizardNinjaSamurai\obj\Debug\netcoreapp2.0\WizardNinjaSamurai.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\WizardNinjaSamurai\obj\Debug\netcoreapp2.0\WizardNinjaSamurai.pdb

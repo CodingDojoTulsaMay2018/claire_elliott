@@ -1,0 +1,11 @@
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\MultiplicationTable\obj\Debug\netcoreapp2.0\MultiplicationTable.csprojResolveAssemblyReference.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\MultiplicationTable\obj\Debug\netcoreapp2.0\MultiplicationTable.csproj.CoreCompileInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\MultiplicationTable\obj\Debug\netcoreapp2.0\MultiplicationTable.AssemblyInfoInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\MultiplicationTable\obj\Debug\netcoreapp2.0\MultiplicationTable.AssemblyInfo.cs
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\MultiplicationTable\bin\Debug\netcoreapp2.0\MultiplicationTable.deps.json
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\MultiplicationTable\bin\Debug\netcoreapp2.0\MultiplicationTable.runtimeconfig.json
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\MultiplicationTable\bin\Debug\netcoreapp2.0\MultiplicationTable.runtimeconfig.dev.json
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\MultiplicationTable\bin\Debug\netcoreapp2.0\MultiplicationTable.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\MultiplicationTable\bin\Debug\netcoreapp2.0\MultiplicationTable.pdb
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\MultiplicationTable\obj\Debug\netcoreapp2.0\MultiplicationTable.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\MultiplicationTable\obj\Debug\netcoreapp2.0\MultiplicationTable.pdb

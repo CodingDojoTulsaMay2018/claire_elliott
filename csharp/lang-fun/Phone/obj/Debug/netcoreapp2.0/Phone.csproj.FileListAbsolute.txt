@@ -1,0 +1,11 @@
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Phone\obj\Debug\netcoreapp2.0\Phone.csprojResolveAssemblyReference.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Phone\obj\Debug\netcoreapp2.0\Phone.csproj.CoreCompileInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Phone\obj\Debug\netcoreapp2.0\Phone.AssemblyInfoInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Phone\obj\Debug\netcoreapp2.0\Phone.AssemblyInfo.cs
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Phone\bin\Debug\netcoreapp2.0\Phone.deps.json
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Phone\bin\Debug\netcoreapp2.0\Phone.runtimeconfig.json
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Phone\bin\Debug\netcoreapp2.0\Phone.runtimeconfig.dev.json
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Phone\bin\Debug\netcoreapp2.0\Phone.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Phone\bin\Debug\netcoreapp2.0\Phone.pdb
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Phone\obj\Debug\netcoreapp2.0\Phone.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Phone\obj\Debug\netcoreapp2.0\Phone.pdb

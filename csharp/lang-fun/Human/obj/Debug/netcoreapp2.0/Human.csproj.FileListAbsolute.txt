@@ -1,0 +1,11 @@
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Human\obj\Debug\netcoreapp2.0\Human.csprojResolveAssemblyReference.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Human\obj\Debug\netcoreapp2.0\Human.csproj.CoreCompileInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Human\obj\Debug\netcoreapp2.0\Human.AssemblyInfoInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Human\obj\Debug\netcoreapp2.0\Human.AssemblyInfo.cs
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Human\bin\Debug\netcoreapp2.0\Human.deps.json
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Human\bin\Debug\netcoreapp2.0\Human.runtimeconfig.json
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Human\bin\Debug\netcoreapp2.0\Human.runtimeconfig.dev.json
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Human\bin\Debug\netcoreapp2.0\Human.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Human\bin\Debug\netcoreapp2.0\Human.pdb
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Human\obj\Debug\netcoreapp2.0\Human.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\lang-fun\Human\obj\Debug\netcoreapp2.0\Human.pdb
