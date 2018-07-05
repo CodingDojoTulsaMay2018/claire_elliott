@@ -1,0 +1,32 @@
+#wrapper{
+    width: 1000px;
+    margin: 0 auto;
+}
+textarea{
+    margin-bottom: 30px;
+}
+.jumbotron p {
+    font-weight: 300;
+}
+.profile img{
+    border-radius: 100%;
+    border: 10px solid turquoise;
+    width: 90%;
+}
+.card-img-top{
+    width: 100%;
+}
+.card-text{
+    font-weight: 300;
+    font-size: .8em;
+}
+.card-footer{
+    text-align: center;
+    background-color: #fff;
+    border: none;
+}
+.container form{
+    background-color: #e9ecef;
+    padding: 40px;
+    border-radius: 7px;
+}

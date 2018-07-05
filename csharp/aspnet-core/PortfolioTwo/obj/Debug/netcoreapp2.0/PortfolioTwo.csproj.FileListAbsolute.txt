@@ -1,0 +1,11 @@
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioTwo\bin\Debug\netcoreapp2.0\PortfolioTwo.deps.json
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioTwo\bin\Debug\netcoreapp2.0\PortfolioTwo.runtimeconfig.json
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioTwo\bin\Debug\netcoreapp2.0\PortfolioTwo.runtimeconfig.dev.json
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioTwo\bin\Debug\netcoreapp2.0\PortfolioTwo.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioTwo\bin\Debug\netcoreapp2.0\PortfolioTwo.pdb
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioTwo\obj\Debug\netcoreapp2.0\PortfolioTwo.csprojResolveAssemblyReference.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioTwo\obj\Debug\netcoreapp2.0\PortfolioTwo.csproj.CoreCompileInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioTwo\obj\Debug\netcoreapp2.0\PortfolioTwo.AssemblyInfoInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioTwo\obj\Debug\netcoreapp2.0\PortfolioTwo.AssemblyInfo.cs
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioTwo\obj\Debug\netcoreapp2.0\PortfolioTwo.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioTwo\obj\Debug\netcoreapp2.0\PortfolioTwo.pdb
