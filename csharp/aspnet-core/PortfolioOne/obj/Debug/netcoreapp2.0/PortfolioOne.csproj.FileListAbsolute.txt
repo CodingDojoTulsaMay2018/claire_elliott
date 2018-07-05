@@ -1,0 +1,11 @@
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioOne\bin\Debug\netcoreapp2.0\PortfolioOne.deps.json
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioOne\bin\Debug\netcoreapp2.0\PortfolioOne.runtimeconfig.json
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioOne\bin\Debug\netcoreapp2.0\PortfolioOne.runtimeconfig.dev.json
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioOne\bin\Debug\netcoreapp2.0\PortfolioOne.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioOne\bin\Debug\netcoreapp2.0\PortfolioOne.pdb
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioOne\obj\Debug\netcoreapp2.0\PortfolioOne.csprojResolveAssemblyReference.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioOne\obj\Debug\netcoreapp2.0\PortfolioOne.csproj.CoreCompileInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioOne\obj\Debug\netcoreapp2.0\PortfolioOne.AssemblyInfoInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioOne\obj\Debug\netcoreapp2.0\PortfolioOne.AssemblyInfo.cs
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioOne\obj\Debug\netcoreapp2.0\PortfolioOne.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\PortfolioOne\obj\Debug\netcoreapp2.0\PortfolioOne.pdb
