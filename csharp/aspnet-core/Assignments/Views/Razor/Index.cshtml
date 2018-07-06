@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Razor Fun!</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <h2>Razor Fun!</h2>
+        @{
+            string[] StringList = new string[] {
+                                    "A for Apple",
+                                    "B for Boy",
+                                    "C for Cat",
+                                    "D for Dog"
+                                };
+            
+            foreach(string word in StringList)
+            {
+                if(word.ToLower().StartsWith("c"))
+                {
+                    <p class="red">@word</p>
+                }
+                else
+                {
+                <p>@word</p>
+                }
+            }
+        }
+    </div>
+</body>
+</html>
