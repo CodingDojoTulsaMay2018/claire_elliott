@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Time Display!</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+
+@using Microsoft.AspNetCore.Http
+
+
+<body>
+    <div id="wrapper" class="text-center">
+        <h2>Random Passcode Generator</h2>
+        <h5>(passcode #@ViewBag.Counter.ToString())</h5>
+        <div class="datetime">
+            <p>@TempData["passcode"]</p>
+            <a href="random/generate" class="btn btn-info">Generate</a>
+        </div>
+    </div>
+</body>
+</html>

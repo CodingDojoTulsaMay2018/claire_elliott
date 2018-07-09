@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dojodachi</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+    </environment>
+</head>
+@model Dojodachi
+<body>
+<div id="wrapper">
+    <div class="container">
+        <div class="stats">
+            <ul class="nav nav-fill">
+                <li class="nav-item">
+                    <span id="fullness" class="nav-text">Fullness: @Model.fullness</span>
+                </li>
+                <li class="nav-item">
+                    <span id="happiness" class="nav-text">Happiness: @Model.happiness</span>
+                </li>
+                <li class="nav-item">
+                    <span id="energy" class="nav-text">Energy: @Model.energy</span>
+                </li>
+                <li class="nav-item">
+                    <span id="meals" class="nav-text">Meals: @Model.meals</span>
+                </li>
+            </ul>
+        </div>
+        <div class="dojodachi">
+            <img id="dojo-img" class="mx-auto d-block" src="~/images/dojo_walkfront.gif"/>
+        </div>
+        <p id="status" class="text-center mt-5"></p>
+    </div>
+    <div id="buttons" class="button-group">
+        <button id="feed-btn" type="button" class="btn btn-primary btn-lg">Feed</button>
+        <button id="play-btn" type="button" class="btn btn-success btn-lg">Play</button>
+        <button id="work-btn" type="button" class="btn btn-dark btn-lg">Work</button>
+        <button id="sleep-btn" type="button" class="btn btn-info btn-lg">Sleep</button>
+    </div>
+</div>
+<script>
+    $('#feed-btn').click(function(){
+        $.get('Home/Feed', function(e) {
+            $('#status').html(e.message);
+            $('#fullness').html('Fullness: ' + e.fullness);
+            $('#happiness').html('Happiness: ' + e.happiness);
+            $('#meals').html('Meals: ' + e.meals);
+            $('#energy').html('Energy: ' + e.energy);
+            if(e.chance != 3){
+                $('#dojo-img').attr('src','/images/dojo_like.gif');
+            }else{
+                $('#dojo-img').attr('src','/images/dojo_dislike.gif');
+            }
+            if(e.meals == 0){
+                $('#dojo-img').attr('src','/images/dojo_dislike.gif');
+            }
+            setTimeout(function() {
+                $('#dojo-img').attr('src','/images/dojo_walkfront.gif');
+                $('#status').html("");
+            }, 3000)
+            if(e.fullness > 100 && e.happiness > 100){
+                $('#status').html("Great job! You've made " + e.name + " complete happy!");
+                $('#dojo-img').attr('src','/images/dojo_win.gif');
+                $('#buttons').html('<a id="reset-btn" type="button" class="btn btn-primary btn-lg" href="Home/Reset">Reset</a>')
+            };
+        });
+    });
+
+        $('#play-btn').click(function(){
+        $.get('Home/Play', function(e) {
+            $('#status').html(e.message);
+            $('#fullness').html('Fullness: ' + e.fullness);
+            $('#happiness').html('Happiness: ' + e.happiness);
+            $('#meals').html('Meals: ' + e.meals);
+            $('#energy').html('Energy: ' + e.energy);
+            if(e.chance != 3){
+                $('#dojo-img').attr('src','/images/dojo_like.gif');
+            }else{
+                $('#dojo-img').attr('src','/images/dojo_dislike.gif');
+            }
+            if(e.energy == 0){
+                $('#dojo-img').attr('src','/images/dojo_dislike.gif');
+            }
+            setTimeout(function() {
+                $('#dojo-img').attr('src','/images/dojo_walkfront.gif');
+                $('#status').html("");
+            }, 3000)
+            if(e.fullness > 100 && e.happiness > 100){
+                $('#status').html("Great job! You've made " + e.name + " complete happy!");
+                $('#dojo-img').attr('src','/images/dojo_win.gif');
+                $('#buttons').html('<a id="reset-btn" type="button" class="btn btn-primary btn-lg" href="Home/Reset">Reset</a>')
+            };
+        });
+    });
+
+        $('#work-btn').click(function(){
+        $.get('Home/Work', function(e) {
+            $('#status').html(e.message);
+            $('#fullness').html('Fullness: ' + e.fullness);
+            $('#happiness').html('Happiness: ' + e.happiness);
+            $('#meals').html('Meals: ' + e.meals);
+            $('#energy').html('Energy: ' + e.energy);
+            $('#dojo-img').attr('src','/images/dojo_tired.gif');
+            if(e.energy == 0){
+                $('#dojo-img').attr('src','/images/dojo_dislike.gif');
+            }
+            setTimeout(function() {
+                $('#dojo-img').attr('src','/images/dojo_walkfront.gif');
+                $('#status').html("");
+            }, 3000)
+            });
+        });
+
+        $('#sleep-btn').click(function(){
+        $.get('Home/Sleep', function(e) {
+            $('#status').html(e.message);
+            $('#fullness').html('Fullness: ' + e.fullness);
+            $('#happiness').html('Happiness: ' + e.happiness);
+            $('#meals').html('Meals: ' + e.meals);
+            $('#energy').html('Energy: ' + e.energy);
+            $('#dojo-img').attr('src','/images/dojo_sleep.gif');
+            setTimeout(function() {
+                $('#dojo-img').attr('src','/images/dojo_walkfront.gif');
+                $('#status').html("");
+            }, 3000)
+            if(e.fullness < 1 || e.happiness < 1){
+                $('#status').html("Oh no! " + e.name + " has died!");
+                $('#dojo-img').attr('src','/images/dojo_lose.gif');
+                $('#buttons').html('<a id="reset-btn" type="button" class="btn btn-primary btn-lg" href="Home/Reset">Reset</a>')
+            };
+            });
+        });
+</script>
+</body>
+
+</html>

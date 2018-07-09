@@ -3,9 +3,9 @@ C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\Assignments\bin\Debug\ne
 C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\Assignments\bin\Debug\netcoreapp2.0\Assignments.runtimeconfig.dev.json
 C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\Assignments\bin\Debug\netcoreapp2.0\Assignments.dll
 C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\Assignments\bin\Debug\netcoreapp2.0\Assignments.pdb
-C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\Assignments\obj\Debug\netcoreapp2.0\Assignments.csprojResolveAssemblyReference.cache
 C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\Assignments\obj\Debug\netcoreapp2.0\Assignments.csproj.CoreCompileInputs.cache
 C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\Assignments\obj\Debug\netcoreapp2.0\Assignments.AssemblyInfoInputs.cache
 C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\Assignments\obj\Debug\netcoreapp2.0\Assignments.AssemblyInfo.cs
 C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\Assignments\obj\Debug\netcoreapp2.0\Assignments.dll
 C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\Assignments\obj\Debug\netcoreapp2.0\Assignments.pdb
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\Assignments\obj\Debug\netcoreapp2.0\Assignments.csprojAssemblyReference.cache

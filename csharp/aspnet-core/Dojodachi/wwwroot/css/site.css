@@ -1,0 +1,25 @@
+﻿#wrapper {
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+.container{
+    width: 600px;
+}
+.button-group
+{
+    text-align: center;
+}
+.button-group button{
+    margin: 0 20px;
+}
+.container{
+    padding: 10px;
+    background-color: #888;
+    border-radius: 7px;
+    min-height: 400px;
+    margin-bottom: 1rem;
+    border-bottom: 5px solid #535353;
+}
+.dojodachi img{
+    margin-top: 150px;
+}

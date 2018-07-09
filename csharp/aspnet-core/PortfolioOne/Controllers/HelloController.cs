@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+
 namespace PortfolioOne.Controllers
 {
     public class HelloController : Controller
@@ -6,9 +8,9 @@ namespace PortfolioOne.Controllers
         // INDEX
         [HttpGet]
         [Route("")]
-        public string Index()
+        public IActionResult Index()
         {
-            return "This is my Index!";
+            return View();
         }
         // PROJECTS
         [HttpGet]

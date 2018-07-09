@@ -1,0 +1,21 @@
+﻿#wrapper,
+.button-group{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+.main-container{
+    margin: 0 auto;
+    background-color: lightgray;
+    border-radius: 7px;
+    height: 200px;
+    margin-bottom: 2rem;
+}
+#wrapper{
+    margin-top: 100px;
+}
+p{
+    padding: 20px;
+    padding-top: 70px;
+    font-size: 2rem;
+}

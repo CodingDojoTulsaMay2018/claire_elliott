@@ -25,6 +25,7 @@ namespace PortfolioOne
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseStaticFiles();
             app.UseMvc();
         }
     }

@@ -41,3 +41,11 @@
     font-weight: bold;
     text-transform: uppercase;
 }
+.error{
+    font-size: .7em;
+    color: red;
+}
+.badge-sucess{
+    width: 200px;
+    margin: 0 auto;
+}

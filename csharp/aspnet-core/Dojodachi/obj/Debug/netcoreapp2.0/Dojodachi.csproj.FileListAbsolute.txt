@@ -1,0 +1,11 @@
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\dojodachi\bin\Debug\netcoreapp2.0\Dojodachi.deps.json
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\dojodachi\bin\Debug\netcoreapp2.0\Dojodachi.runtimeconfig.json
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\dojodachi\bin\Debug\netcoreapp2.0\Dojodachi.runtimeconfig.dev.json
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\dojodachi\bin\Debug\netcoreapp2.0\Dojodachi.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\dojodachi\bin\Debug\netcoreapp2.0\Dojodachi.pdb
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\dojodachi\obj\Debug\netcoreapp2.0\Dojodachi.csprojAssemblyReference.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\dojodachi\obj\Debug\netcoreapp2.0\Dojodachi.csproj.CoreCompileInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\dojodachi\obj\Debug\netcoreapp2.0\Dojodachi.AssemblyInfoInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\dojodachi\obj\Debug\netcoreapp2.0\Dojodachi.AssemblyInfo.cs
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\dojodachi\obj\Debug\netcoreapp2.0\Dojodachi.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\aspnet-core\dojodachi\obj\Debug\netcoreapp2.0\Dojodachi.pdb
