@@ -16438,3 +16438,12 @@ csharp/lang-fun/TowerDefense/obj/Debug/netcoreapp2.0/TowerDefense.AssemblyInfoIn
 csharp/lang-fun/TowerDefense/obj/Debug/netcoreapp2.0/TowerDefense.csproj.CoreCompileInputs.cache
 csharp/lang-fun/TowerDefense/obj/Debug/netcoreapp2.0/TowerDefense.csprojResolveAssemblyReference.cache
 csharp/BuggyHeroes
+node_modules/bower
+node_modules/.bin/bower
+node_modules/.bin/bower.cmd
+csharp/aspnet-core/QuotingDojo
+csharp/aspnet-core/QuotingDojo/QuotingDojo.csproj
+csharp/aspnet-core/QuotingDojo/obj/Debug/netcoreapp2.0/QuotingDojo.csproj.CoreCompileInputs.cache
+csharp/aspnet-core/QuotingDojo/obj/Debug/netcoreapp2.0/QuotingDojo.csprojAssemblyReference.cache
+csharp/aspnet-core/QuotingDojo/obj/QuotingDojo.csproj.nuget.cache
+csharp/aspnet-core/QuotingDojo/obj/QuotingDojo.csproj.nuget.g.props

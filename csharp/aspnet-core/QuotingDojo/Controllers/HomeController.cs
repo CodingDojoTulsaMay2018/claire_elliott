@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Web;
+using DbConnection;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using QuotingDojo.Models;
 
 namespace QuotingDojo.Controllers
@@ -15,17 +18,27 @@ namespace QuotingDojo.Controllers
             return View();
         }
 
-        public IActionResult About()
+        [HttpPost("")]
+        public IActionResult Create(Quote newquote)
         {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
+            if(ModelState.IsValid)
+            {
+                DateTime current = DateTime.Now;
+                string date = current.ToString("yyyy-MM-dd HH:mm:ss");
+                DbConnector.Execute($"INSERT INTO quote (message,author,created_at) VALUES ('{newquote.Message}','{newquote.Author}','{date}')");
+                return RedirectToAction("Dashboard");
+            }
+            else
+            {
+                return View("Index", newquote);
+            }
+            
         }
 
-        public IActionResult Contact()
+        public IActionResult Dashboard()
         {
-            ViewData["Message"] = "Your contact page.";
-
+            List<Dictionary<string,object>> AllQuotes = DbConnector.Query("SELECT * FROM quote ORDER BY created_at DESC");
+            ViewBag.AllQuotes = AllQuotes;
             return View();
         }
 
