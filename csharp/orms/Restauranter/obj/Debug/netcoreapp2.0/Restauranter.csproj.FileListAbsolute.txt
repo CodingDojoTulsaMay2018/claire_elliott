@@ -1,0 +1,11 @@
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\Restauranter\bin\Debug\netcoreapp2.0\Restauranter.deps.json
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\Restauranter\bin\Debug\netcoreapp2.0\Restauranter.runtimeconfig.json
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\Restauranter\bin\Debug\netcoreapp2.0\Restauranter.runtimeconfig.dev.json
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\Restauranter\bin\Debug\netcoreapp2.0\Restauranter.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\Restauranter\bin\Debug\netcoreapp2.0\Restauranter.pdb
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\Restauranter\obj\Debug\netcoreapp2.0\Restauranter.csprojAssemblyReference.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\Restauranter\obj\Debug\netcoreapp2.0\Restauranter.csproj.CoreCompileInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\Restauranter\obj\Debug\netcoreapp2.0\Restauranter.AssemblyInfoInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\Restauranter\obj\Debug\netcoreapp2.0\Restauranter.AssemblyInfo.cs
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\Restauranter\obj\Debug\netcoreapp2.0\Restauranter.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\Restauranter\obj\Debug\netcoreapp2.0\Restauranter.pdb

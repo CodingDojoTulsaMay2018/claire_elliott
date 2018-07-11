@@ -1,0 +1,25 @@
+﻿#wrapper{
+    width: 1000px;
+    margin: 0 auto;
+}
+.error{
+    color: red;
+    font-size: .8em;
+}
+.container{
+    margin-top: 3rem;
+}
+.reviews{
+    width: 600px;
+}
+.card{
+    margin-bottom: 20px;
+}
+.blockquote-footer{
+    margin-top: 10px;
+    margin-left: 25px;
+    font-size: 1em;
+}
+textarea {
+    min-width: 100%;
+}

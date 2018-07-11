@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+@model Review
+<div id="wrapper">
+    <div class="container reviews">
+        <h2 class="text-center">All Reviews</h2>
+        @{
+        foreach(Review review in ViewBag.allReviews)
+        {   
+            <div class="card">
+                <h5 class="card-header">@review.RestaurantName</h5>
+                <div class="card-body">
+                    <blockquote>
+                        <p class="mb-0">"@review.Message"</p>
+                        <footer class="blockquote-footer lead">@review.Stars-★ review by @review.ReviewerName on @review.VisitDate.ToLongDateString() </footer>
+                    </blockquote>
+
+                </div>
+            </div>
+            }
+        }
+    </div>
+
+</div>
