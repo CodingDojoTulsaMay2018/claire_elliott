@@ -1,0 +1,15 @@
+﻿#wrapper{
+    width: 1000px;
+    margin: 0 auto;
+}
+.container{
+    width: 600px;
+    margin-top: 3rem;
+}
+.error{
+    color: red;
+    font-size: .6rem;
+}
+.link{
+    font-size: .6rem;
+}

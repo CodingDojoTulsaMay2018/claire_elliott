@@ -1,0 +1,11 @@
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\LoginRegistration\bin\Debug\netcoreapp2.0\LoginRegistration.deps.json
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\LoginRegistration\bin\Debug\netcoreapp2.0\LoginRegistration.runtimeconfig.json
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\LoginRegistration\bin\Debug\netcoreapp2.0\LoginRegistration.runtimeconfig.dev.json
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\LoginRegistration\bin\Debug\netcoreapp2.0\LoginRegistration.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\LoginRegistration\bin\Debug\netcoreapp2.0\LoginRegistration.pdb
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\LoginRegistration\obj\Debug\netcoreapp2.0\LoginRegistration.csprojAssemblyReference.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\LoginRegistration\obj\Debug\netcoreapp2.0\LoginRegistration.csproj.CoreCompileInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\LoginRegistration\obj\Debug\netcoreapp2.0\LoginRegistration.AssemblyInfoInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\LoginRegistration\obj\Debug\netcoreapp2.0\LoginRegistration.AssemblyInfo.cs
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\LoginRegistration\obj\Debug\netcoreapp2.0\LoginRegistration.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\LoginRegistration\obj\Debug\netcoreapp2.0\LoginRegistration.pdb
