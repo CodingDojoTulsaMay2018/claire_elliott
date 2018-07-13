@@ -1,0 +1,32 @@
+﻿#wrapper{
+    width: 1000px;
+    margin: 0 auto;
+}
+.navbar-brand{
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+.main-content{
+    width: 500px;
+}
+.link{
+    font-size: .7rem;
+}
+.error{
+    color: red;
+    font-size: .7rem;
+}
+#depositWithdraw{
+    text-align: center;
+}
+#acct{
+    width: 100px;
+}
+#acct,
+form#depositWithdraw{
+    display: inline;
+}
+.table{
+    text-align: center;
+}

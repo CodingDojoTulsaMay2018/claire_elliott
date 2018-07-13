@@ -1,9 +1,9 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace LoginRegistration.Models
+namespace BankAccounts.Models
 {
-    public class Users
+    public class User
     {
         public int Id { get; set; }
 

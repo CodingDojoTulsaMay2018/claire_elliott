@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Account";
+    Layout = "~/Views/Shared/_LayoutLoggedIn.cshtml";
+}
+@model Transaction
+<div id="wrapper">
+    <div class="container mt-4">
+        <h3 class="display-4 mb-4">Account Information</h3>
+        <div class="top  d-flex justify-content-between">
+            <span class="lead">Current Balance: <b>$@ViewBag.Balance.ToString("0.00")</b></span>
+            <form id="depositWithdraw" asp-action="Transact" asp-controller="Home" method="post">
+                <span class=" error" asp-validation-for="Amount"></span>
+                <span class="lead">Deposit/Withdraw</span>
+                <input id="acct" step="1.00" placeholder="0.00" type="double" name="amount" class="form-control" asp-for="Amount">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+        </div>
+        
+        <table class="table mt-4 text-center">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Amount</th>
+                <th scope="col">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(Transaction t in ViewBag.Transactions){
+                <tr>
+                    <td>$ @t.Amount.ToString("0.00")</td>
+                    <td>@t.CreatedAt.ToLongDateString() &mdash; @t.CreatedAt.ToShortTimeString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    </div>
+    
+</div>
