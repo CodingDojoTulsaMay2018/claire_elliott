@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+@model PostsComments
+<div id="wrapper">
+    <div class="container new-post my-5">
+        <h3>Post a Message</h3>
+        <form method="post" asp-action="Posting" asp-controller="Home">
+            <span class="error" asp-validation-for="posts.Content"></span>
+            <textarea class="form-control" name="Content" asp-for="posts.Content"></textarea>
+            <button type="submit" class="btn btn-info btn-sm">Submit</button>
+        </form>
+    </div>
+    <div class="container main-content">
+        @foreach(var p in ViewBag.allPosts)
+        {
+            <div class="post-content">
+                <h5>@p.Creator.FirstName @p.Creator.LastName &mdash;  @p.CreatedAt.ToLongDateString()</h5>
+                <p>@p.Content</p>
+            </div>
+            <div class="comments">
+                <div class="comment-content top">
+                @foreach(var c in p.Comments){
+                    <blockquote class="blockquote">
+                        <p>@c.Content</p>
+                        <footer class="blockquote-footer">@c.Commenter.FirstName @c.Commenter.LastName @c.CreatedAt.ToShortDateString()  at @c.CreatedAt.ToShortTimeString()</footer>
+                    </blockquote>
+                }
+                </div>
+                <div class="new-comment">
+                    <form method="post" asp-action="Commenting" asp-controller="Home">
+                        <span class="error" asp-validation-for="comments.Content"></span>
+                        <input type="hidden" name="MessageId" value="@p.PostId">
+                        <textarea class="form-control" name="Content" asp-for="comments.Content" placeholder="Add a comment..."></textarea>
+                        <button type="submit" class="btn btn-info btn-sm">Submit</button>
+                    </form>
+                </div>
+            </div>
+        }
+    </div>
+</div>

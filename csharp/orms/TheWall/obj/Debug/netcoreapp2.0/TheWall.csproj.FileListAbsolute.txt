@@ -1,0 +1,11 @@
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\TheWall\bin\Debug\netcoreapp2.0\TheWall.deps.json
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\TheWall\bin\Debug\netcoreapp2.0\TheWall.runtimeconfig.json
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\TheWall\bin\Debug\netcoreapp2.0\TheWall.runtimeconfig.dev.json
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\TheWall\bin\Debug\netcoreapp2.0\TheWall.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\TheWall\bin\Debug\netcoreapp2.0\TheWall.pdb
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\TheWall\obj\Debug\netcoreapp2.0\TheWall.csprojAssemblyReference.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\TheWall\obj\Debug\netcoreapp2.0\TheWall.csproj.CoreCompileInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\TheWall\obj\Debug\netcoreapp2.0\TheWall.AssemblyInfoInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\TheWall\obj\Debug\netcoreapp2.0\TheWall.AssemblyInfo.cs
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\TheWall\obj\Debug\netcoreapp2.0\TheWall.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\TheWall\obj\Debug\netcoreapp2.0\TheWall.pdb
