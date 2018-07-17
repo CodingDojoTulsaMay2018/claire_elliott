@@ -100,15 +100,17 @@ namespace WeddingPlanner.Controllers
             }
             else
             {
-                ModelViewDashboard view = new ModelViewDashboard()
+                ViewModelDashboard view = new ViewModelDashboard()
                 {
                     users = new Users(),
-                    weddings = new Weddings(),
-                    hasGuests = new HasGuests()
+                    weddings = new Wed(),
+                    guests = new HasGuests()
                 };
 
-                List<Weddings> allWeddings = _context.Weddings.ToList();
+                List<Wed> allWeddings = _context.Weddings.ToList();
                 ViewBag.Weddings = allWeddings;
+                ViewBag.CurrentUser = _context.Users
+                                        .SingleOrDefault(u => u.Id == HttpContext.Session.GetInt32("Id"));
                 return View(view);
             }
             
@@ -123,16 +125,27 @@ namespace WeddingPlanner.Controllers
 
         [HttpPost]
         [Route("Create")]
-        public IActionResult Create(Weddings wedding)
+        public IActionResult Create(Wed wedding)
         {
             if(ModelState.IsValid)
             {
+                wedding.UserId = (int)HttpContext.Session.GetInt32("Id");
+                _context.Weddings.Add(wedding);
+                _context.SaveChanges();
                 return RedirectToAction("Dashboard");
             }
             else
             {
                 return View("AddWedding", wedding);
             }
+        }
+        [HttpGet("RSVP/{id}")]
+        public IActionResult RSVP(int id){
+            Wed thisWedding = _context.Weddings.SingleOrDefault(w => w.Id == id);
+            thisWedding.Guests.Add(ViewBag.CurrentUser);
+            _context.SaveChanges();
+
+            return RedirectToAction("Dashboard");
         }
 
         [HttpGet]

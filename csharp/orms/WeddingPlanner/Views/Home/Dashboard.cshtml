@@ -2,6 +2,10 @@
     ViewData["Title"] = "Dashboard";
     Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
 }
+@model ViewModelDashboard
+@using System.Linq
+@using System.Collections.Generic
+
 <div id="wrapper">
     <h3 class="display-4 mt-4">Available Weddings</h3>
     <table class="table mt-4 text-center table-striped">
@@ -14,6 +18,33 @@
             </tr>
         </thead>
         <tbody>
+            @{
+                foreach(Weddings wedding in ViewBag.Weddings)
+                {
+                    <tr>
+                        <td><a href="WeddingProfile/@wedding.Id">@wedding.Wedder1 and @wedding.Wedder2</a></td>
+                        <td>@wedding.Date.ToLongDateString()</td>
+                        <td>@wedding.Guests.Count</td>
+                        <td>
+                            @if(wedding.UserId == ViewBag.CurrentUser.Id)
+                            {
+                                <a href="Delete/@wedding.Id" class="badge badge-danger">Delete</a>
+                            }
+                            else
+                            {
+                                if(!(wedding.Guests.Contains(ViewBag.CurrentUser)))
+                                {
+                                    <a href="RSVP/@wedding.Id" class="badge badge-light">RSVP</a>
+                                }
+                                else
+                                {
+                                    <a href="UnRSVP/@wedding.Id" class="badge badge-secondary">un-RSVP</a>
+                                }
+                            }
+                        </td>
+                    </tr>
+                }
+            }
         </tbody>
     </table>
 </div>

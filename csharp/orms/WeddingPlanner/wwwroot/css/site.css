@@ -9,12 +9,15 @@
     color: red;
     font-size: .7rem;
 }
-.badge-light{
-    padding: 10px;
+.badge-light,
+.btn-light{
     background-color: #60acdf;
     color: white;
 }
 .table .thead-dark th{
     background-color: #60acdf;
     border-color: #60acdf;
+}
+.table tbody{
+    font-size: .8rem;
 }

@@ -5,10 +5,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WeddingPlanner.Models
 {
-    public class ModelViewDashboard
+    public class ViewModelDashboard
     {
         public Users users { get; set; }
-        public Weddings weddings { get; set; }
-        public HasGuests hasGuests { get; set; }
+        public Wed weddings { get; set; }
+        public HasGuests guests { get; set; }
     }
 }

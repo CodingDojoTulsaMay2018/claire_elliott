@@ -27,17 +27,19 @@ namespace WeddingPlanner.Models
         [Required]
         [MinLength(8)]
         public string Password { get; set; }
-
         public DateTime CreatedAt { get; set; }
 
         [Required]
         [NotMapped]
         [Compare(nameof(Password), ErrorMessage = "Passwords do not match.")]
         public string ConfirmPassword { get; set; }
+        [NotMapped]
+        public List<Wed> GoingTo { get; set; }
 
         public Users()
         {
             CreatedAt = DateTime.Now;
+            GoingTo = new List<Wed>();
         }
     }
 }

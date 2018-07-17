@@ -13,7 +13,7 @@ namespace WeddingPlanner.Models
             DateTime.Now.AddYears(6).ToShortDateString()) 
             {}
     }  
-    public class Weddings
+    public class Wed
     {
         [Key]
         public int Id { get; set; }
@@ -23,12 +23,10 @@ namespace WeddingPlanner.Models
 
         [Required]
         [MinLength(2),MaxLength(255)]
-        [RegularExpression(@"^[a-zA-Z]+[ a-zA-Z-_]*$", ErrorMessage = "Use letters only")]
         public string Wedder1 { get; set; }
 
         [Required]
         [MinLength(2),MaxLength(255)]
-        [RegularExpression(@"^[a-zA-Z]+[ a-zA-Z-_]*$", ErrorMessage = "Use letters only")]
         public string Wedder2 { get; set; }
 
         [Required]
@@ -39,9 +37,8 @@ namespace WeddingPlanner.Models
         [MinLength(8)]
         public string Address { get; set; }
         public DateTime CreatedAt { get; set; }
-        List<Users> Guests { get; set; }
-
-        public Weddings()
+        public List<Users> Guests { get; set; }
+        public Wed()
         {
             CreatedAt = DateTime.Now;
             Guests = new List<Users>();
