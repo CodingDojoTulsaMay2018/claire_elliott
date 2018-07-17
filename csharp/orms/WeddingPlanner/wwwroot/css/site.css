@@ -1,0 +1,16 @@
+#wrapper{
+    width: 1000px;
+    margin: 0 auto;
+}
+.col-lg-6{
+    padding: 0 50px;
+}
+.error{
+    color: red;
+    font-size: .7rem;
+}
+.badge-light{
+    padding: 10px;
+    background-color: #60acdf;
+    color: white;
+}

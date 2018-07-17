@@ -1,0 +1,11 @@
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\WeddingPlanner\bin\Debug\netcoreapp2.0\WeddingPlanner.deps.json
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\WeddingPlanner\bin\Debug\netcoreapp2.0\WeddingPlanner.runtimeconfig.json
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\WeddingPlanner\bin\Debug\netcoreapp2.0\WeddingPlanner.runtimeconfig.dev.json
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\WeddingPlanner\bin\Debug\netcoreapp2.0\WeddingPlanner.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\WeddingPlanner\bin\Debug\netcoreapp2.0\WeddingPlanner.pdb
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\WeddingPlanner\obj\Debug\netcoreapp2.0\WeddingPlanner.csprojAssemblyReference.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\WeddingPlanner\obj\Debug\netcoreapp2.0\WeddingPlanner.csproj.CoreCompileInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\WeddingPlanner\obj\Debug\netcoreapp2.0\WeddingPlanner.AssemblyInfoInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\WeddingPlanner\obj\Debug\netcoreapp2.0\WeddingPlanner.AssemblyInfo.cs
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\WeddingPlanner\obj\Debug\netcoreapp2.0\WeddingPlanner.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\WeddingPlanner\obj\Debug\netcoreapp2.0\WeddingPlanner.pdb
