@@ -109,9 +109,30 @@ namespace WeddingPlanner.Controllers
 
                 List<Weddings> allWeddings = _context.Weddings.ToList();
                 ViewBag.Weddings = allWeddings;
-                return View();
+                return View(view);
             }
             
+        }
+
+        [HttpGet]
+        [Route("Create")]
+        public IActionResult AddWedding()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("Create")]
+        public IActionResult Create(Weddings wedding)
+        {
+            if(ModelState.IsValid)
+            {
+                return RedirectToAction("Dashboard");
+            }
+            else
+            {
+                return View("AddWedding", wedding);
+            }
         }
 
         [HttpGet]

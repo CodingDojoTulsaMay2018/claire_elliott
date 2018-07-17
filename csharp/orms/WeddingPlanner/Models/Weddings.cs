@@ -5,6 +5,14 @@ using System;
 
 namespace WeddingPlanner.Models
 {
+
+    public class CustomDateAttribute : RangeAttribute
+    {
+        public CustomDateAttribute() : base(typeof(DateTime), 
+            DateTime.Now.ToShortDateString(),
+            DateTime.Now.AddYears(6).ToShortDateString()) 
+            {}
+    }  
     public class Weddings
     {
         [Key]
@@ -24,6 +32,7 @@ namespace WeddingPlanner.Models
         public string Wedder2 { get; set; }
 
         [Required]
+        [CustomDateAttribute(ErrorMessage = "Date must be in the future.")]
         public DateTime Date { get; set; }
         
         [Required]

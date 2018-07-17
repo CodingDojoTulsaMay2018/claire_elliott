@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "Plan Your Wedding";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
+}
+
+@model Weddings
+
+<div id="wrapper">
+    <div class="container">
+        <h3 class="display-4">Plan Your Wedding</h3>
+        <form asp-action="Create" asp-controller="Home" method="post">
+            <div class="form-group">
+                <label for="wedder1">Wedder #1</label>
+                <span class=" error" asp-validation-for="Wedder1"></span>
+                <input type="text" class="form-control form-control-sm" asp-for="Wedder1">
+            </div>
+            <div class="form-group">
+                <label for="wedder2">Wedder #2</label>
+                <span class=" error" asp-validation-for="Wedder2"></span>
+                <input type="text" class="form-control form-control-sm" asp-for="Wedder2">
+            </div>
+            <div class="form-group">
+                <label for="date">Date</label>
+                <span class=" error" asp-validation-for="Date"></span>
+                <input type="date" class="form-control form-control-sm" asp-for="Date">
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <span class=" error" asp-validation-for="Address"></span>
+                <input type="text" class="form-control form-control-sm" asp-for="Address">
+            </div>
+            <button type="submite" class="btn btn-light btn-sm">Submit</button>
+        </form>
+    </div>
+</div>

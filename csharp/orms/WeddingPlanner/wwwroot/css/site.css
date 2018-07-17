@@ -14,3 +14,7 @@
     background-color: #60acdf;
     color: white;
 }
+.table .thead-dark th{
+    background-color: #60acdf;
+    border-color: #60acdf;
+}
