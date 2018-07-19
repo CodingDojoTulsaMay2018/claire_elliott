@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "New Category";
+}
+@model ViewModel
+
+<div class="container post-content mt-4">
+    <h2>Create a New Category</h2>
+    @if(TempData["Success"] !=null){
+        <p class="success">@TempData["Success"]</p>
+    }
+    <form asp-action="Create" asp-controller="Home" method="POST">
+        <div class="form-group">
+            <label asp-for="Category.Name">Name</label>
+            <span class=" error" asp-validation-for="Category.Name"></span>
+            <input type="text" class="form-control" asp-for="Category.Name">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

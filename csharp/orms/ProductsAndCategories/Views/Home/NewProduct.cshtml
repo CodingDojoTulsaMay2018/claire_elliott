@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "New Product";
+}
+@model ViewModel
+
+<div class="container post-content mt-4">
+    <h2>Create a New Product</h2>
+    @if(TempData["Success"] !=null){
+        <p class="success">@TempData["Success"]</p>
+    }
+    <form asp-action="Create" asp-controller="Home" method="POST">
+        <div class="form-group">
+            <label asp-for="Product.Name">Name</label>
+            <span class=" error" asp-validation-for="Product.Name"></span>
+            <input type="text" class="form-control" asp-for="Product.Name">
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.Description">Description</label>
+            <span class=" error" asp-validation-for="Product.Description"></span>
+            <input type="text" class="form-control" asp-for="Product.Description">
+        </div>
+        <div class="form-group">
+            <label asp-for="Product.Price">Price</label>
+            <span class=" error" asp-validation-for="Product.Price"></span>
+            <input type="decimal" class="form-control" value="" asp-for="Product.Price" min="0.99" placeholder="0.99">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

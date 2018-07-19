@@ -1,0 +1,45 @@
+#wrapper{
+    width: 500px;
+    margin: 0 auto;
+}
+.navigation{
+    padding: 30px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #00b2d1;
+    border-radius: 7px;
+    border-bottom: 7px solid #017c92;
+    border-right: 1px solid #017c92;
+    border-left: 1px solid #017c92;
+}
+.navigation a{
+    color: white;
+}
+.navigation a:hover{
+    color: white;
+    text-decoration: none;
+}
+.divider{
+    width: 100%; 
+    height: 25px; 
+    border-bottom: 1px solid #ccc; 
+    text-align: center;
+}
+.divider span{
+    color: #5a5a5a;
+    text-align: center;
+    font-size: 1.5em; 
+    background-color: #fff; 
+    padding: 0 10px;
+}
+.post-content{
+    width: 500px;
+}
+.error{
+    color: red;
+    font-size: .7rem;
+}
+.success{
+    color: green;
+    font-size: .7rem;
+}

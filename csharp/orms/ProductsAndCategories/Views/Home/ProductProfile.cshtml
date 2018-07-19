@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "@Model.Product.Name";
+}
+@model ViewModel
+
+<div class="container mt-4">
+    @{
+        foreach(var prod in @Model.ProductList)
+        {
+            if(prod.Id == @Model.Product.Id)
+            {
+                <h2>@Model.Product.Name</h2>
+                <p>@Model.Product.Description</p>
+                <div class="row mt-4">
+                    <div class="col-lg-6">
+                        <h5>Categories:</h5>
+                        <ul>
+                        @foreach(var cat in prod.GroupingList)
+                        {
+                            <li>@cat.Category.Name</li>
+                        }
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <h5>Add Category to Product</h5>
+                        <form action="/CreateGrouping/@Model.Product.Id" method="POST">
+                            <input type="hidden" asp-for="Groupings.ProductId" value="@Model.Product.Id">
+                            <select class="custom-select" asp-for="Groupings.CategoryId">
+                                <option selected>Choose...</option>
+                                @foreach(var cat in @Model.CategoryList)
+                                {
+                                    <option value="@cat.Id">@cat.Name</option>
+                                }
+                            </select>
+                            <button type="submit" class="btn btn-primary mt-4">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            }
+            
+        }
+    }
+    
+</div>

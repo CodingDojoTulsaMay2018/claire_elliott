@@ -1,0 +1,11 @@
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\ProductsAndCategories\bin\Debug\netcoreapp2.0\ProductsAndCategories.deps.json
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\ProductsAndCategories\bin\Debug\netcoreapp2.0\ProductsAndCategories.runtimeconfig.json
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\ProductsAndCategories\bin\Debug\netcoreapp2.0\ProductsAndCategories.runtimeconfig.dev.json
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\ProductsAndCategories\bin\Debug\netcoreapp2.0\ProductsAndCategories.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\ProductsAndCategories\bin\Debug\netcoreapp2.0\ProductsAndCategories.pdb
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\ProductsAndCategories\obj\Debug\netcoreapp2.0\ProductsAndCategories.csprojAssemblyReference.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\ProductsAndCategories\obj\Debug\netcoreapp2.0\ProductsAndCategories.csproj.CoreCompileInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\ProductsAndCategories\obj\Debug\netcoreapp2.0\ProductsAndCategories.AssemblyInfoInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\ProductsAndCategories\obj\Debug\netcoreapp2.0\ProductsAndCategories.AssemblyInfo.cs
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\ProductsAndCategories\obj\Debug\netcoreapp2.0\ProductsAndCategories.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\ProductsAndCategories\obj\Debug\netcoreapp2.0\ProductsAndCategories.pdb
