@@ -1,0 +1,13 @@
+.carousel{
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+}
+.carousel-item img{
+    max-width: 800px;
+    max-height: 500px;
+}
+.col-lg-4 img{
+    border-radius: 7px;
+    max-width: 300px;
+}
