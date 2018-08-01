@@ -5,3 +5,31 @@
 .col-lg-6{
     padding: 0 30px;
 }
+.jumbotron{
+    width: 600px;
+    margin: 20px auto;
+}
+.error{
+    font-size: .7rem;
+    color: red;
+}
+.success{
+    font-size: .7rem;
+    color: green;
+}
+.list-item{
+    list-style-type: none;
+    padding: 10px 0;
+    border-bottom: 2px solid rgba(204, 204, 204, 0.5);
+    border-radius: 3px;
+}
+.list-item:nth-last-of-type(){
+    border-bottom: none;
+}
+.date,
+.counter{
+    font-size: .8rem;
+}
+.counter{
+    font-style: italic;
+}

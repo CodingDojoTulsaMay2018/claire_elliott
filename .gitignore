@@ -16454,3 +16454,6 @@ csharp/orms/BankAccounts/appsettings.json
 csharp/orms/TheWall/appsettings.json
 csharp/orms/WeddingPlanner/appsettings.json
 csharp/orms/DojoSecrets/appsettings.json
+csharp/orms/ProductsAndCategories/appsettings.json
+csharp/orms/UserDashboard/appsettings.json
+csharp/orms/BrightIdeas/appsettings.json

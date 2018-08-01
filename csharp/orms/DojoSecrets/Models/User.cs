@@ -36,11 +36,13 @@ namespace DojoSecrets.Models
         public string ConfirmPassword { get; set; }
         [NotMapped]
         public List<Secret> Secrets { get; set; }
+        public List<Like> Likes { get; set; }
 
         public User()
         {
             CreatedAt = DateTime.Now;
             Secrets = new List<Secret>();
+            Likes = new List<Like>();
         }
     }
 }

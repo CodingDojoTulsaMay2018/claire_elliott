@@ -42,12 +42,12 @@
                 <div class="form-group">
                     <label for="Email">Email address</label>
                     <span class="error" asp-validation-for="loginUser.Email"></span>
-                    <input type="text" class="form-control" asp-for="loginUser.Email">
+                    <input type="text" class="form-control form-control-sm" asp-for="loginUser.Email">
                 </div>
                 <div class="form-group">
                     <label for="Password">Password</label>
                     <span class="error" asp-validation-for="loginUser.Password"></span>
-                    <input type="password" class="form-control" asp-for="loginUser.Password">
+                    <input type="password" class="form-control form-control-sm" asp-for="loginUser.Password">
                 </div>
                 <button type="submit" class="btn btn-primary">Login</button>
             </form>

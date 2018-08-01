@@ -9,6 +9,7 @@ namespace DojoSecrets.Models
     {
         public User regUser { get; set; }
         public LoginUser loginUser { get; set; }
-
+        public Secret secret { get; set; }
+        public List<Secret> secrets { get; set; }
     }
 }

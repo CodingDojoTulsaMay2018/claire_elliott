@@ -1,0 +1,20 @@
+{"response_code":0,"results":[
+    {
+        "category":"Animals",
+        "type":"multiple",
+        "difficulty":"medium",
+        "question":"A carnivorous animal eats flesh, what does a nucivorous animal eat?",
+        "correct_answer":"Nuts",
+        "incorrect_answers":["Nothing","Fruit","Seaweed"]
+    },
+    {
+        "category":"Animals",
+        "type":"multiple",
+        "difficulty":"medium",
+        "question":"What type of animal is a natterjack?",
+        "correct_answer":"Toad",
+        "incorrect_answers":["Bird","Fish","Insect"]
+    },
+        {"category":"Animals","type":"boolean","difficulty":"medium","question":"An octopus can fit through any hole larger than its beak.","correct_answer":"True","incorrect_answers":["False"]},{"category":"Animals","type":"multiple","difficulty":"medium","question":"What is the scientific name for the &quot;Polar Bear&quot;?","correct_answer":"Ursus Maritimus","incorrect_answers":["Polar Bear","Ursus Spelaeus","Ursus Arctos"]},{"category":"Animals","type":"multiple","difficulty":"medium","question":"What are rhino&#039;s horn made of?","correct_answer":"Keratin","incorrect_answers":["Bone","Ivory","Skin"]},{"category":"Animals","type":"multiple","difficulty":"medium","question":"For what reason would a spotted hyena &quot;laugh&quot;?","correct_answer":"Nervousness","incorrect_answers":["Excitement","Aggression","Exhaustion"]},{"category":"Animals","type":"multiple","difficulty":"medium","question":"Which animal was part of an Russian domestication experiment in 1959?","correct_answer":"Foxes","incorrect_answers":["Pigeons","Bears","Alligators"]},{"category":"Animals","type":"multiple","difficulty":"medium","question":"The now extinct species &quot;Thylacine&quot; was native to where?","correct_answer":"Tasmania, Australia","incorrect_answers":["Baluchistan, Pakistan","Wallachia, Romania","Oregon, United States"]},{"category":"Animals","type":"boolean","difficulty":"medium","question":"The Platypus is a mammal.","correct_answer":"True","incorrect_answers":["False"]},{"category":"Animals","type":"multiple","difficulty":"medium","question":"What is the fastest animal?","correct_answer":"Peregrine Falcon","incorrect_answers":["Golden Eagle","Cheetah","Horsefly"]}
+    ]
+}

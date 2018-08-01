@@ -8,6 +8,8 @@ namespace DojoSecrets.Models
     [Table("Likes")]
     public class Like
     {
+        [Key]
+        public int Id { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
         public int SecretId { get; set; }

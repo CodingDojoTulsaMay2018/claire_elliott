@@ -82,7 +82,7 @@ namespace WeddingPlanner.Controllers
                     HttpContext.Session.SetInt32("Id", NewUser.Id);
                     return RedirectToAction("Dashboard");
                 }
-                ModelState.AddModelError("users.Email", "Email is already registered.");
+                ModelState.AddModelError("Email", "Email is already registered.");
                 return View("Index", FormData);
             }
             else

@@ -10,20 +10,19 @@ namespace DojoSecrets.Models
     {
         [Key]
         public int Id { get; set; }
-
         public int UserId { get; set; }
-
+        
         [Required]
         [MinLength(5), MaxLength(255)]
         public string Content { get; set; }
         public DateTime CreatedAt { get; set; }
         public User Creator { get; set; }
-        public List<User> LikedBy { get; set; }
+        public List<Like> Likes { get; set; }
 
         public Secret()
         {
             CreatedAt = DateTime.Now;
-            LikedBy = new List<User>();
+            Likes = new List<Like>();
         }
     }
 }

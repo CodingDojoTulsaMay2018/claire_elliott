@@ -1,0 +1,11 @@
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\UserDashboard\bin\Debug\netcoreapp2.0\UserDashboard.deps.json
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\UserDashboard\bin\Debug\netcoreapp2.0\UserDashboard.runtimeconfig.json
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\UserDashboard\bin\Debug\netcoreapp2.0\UserDashboard.runtimeconfig.dev.json
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\UserDashboard\bin\Debug\netcoreapp2.0\UserDashboard.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\UserDashboard\bin\Debug\netcoreapp2.0\UserDashboard.pdb
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\UserDashboard\obj\Debug\netcoreapp2.0\UserDashboard.csprojAssemblyReference.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\UserDashboard\obj\Debug\netcoreapp2.0\UserDashboard.csproj.CoreCompileInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\UserDashboard\obj\Debug\netcoreapp2.0\UserDashboard.AssemblyInfoInputs.cache
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\UserDashboard\obj\Debug\netcoreapp2.0\UserDashboard.AssemblyInfo.cs
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\UserDashboard\obj\Debug\netcoreapp2.0\UserDashboard.dll
+C:\Users\yueka\Documents\coding-dojo\csharp\orms\UserDashboard\obj\Debug\netcoreapp2.0\UserDashboard.pdb
