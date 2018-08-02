@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz Time!!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container w-50">
+        <h1 class="display-4 text-center">Do You Know Your Fugu?</h1>
+        <form action="/process" method="post">
+            <div class="row">
+                <div class="col">
+                    <input name="fname" type="text" class="form-control" placeholder="First name">
+                </div>
+                <div class="col">
+                    <input name="lname" type="text" class="form-control" placeholder="Last name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput">What does "fugu" mean in English?</label>
+                <input name="meaning" type="text" class="form-control" id="formGroupExampleInput">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">What is the toxin found in fugu called?</label>
+                <input name="toxin" type="text" class="form-control" id="formGroupExampleInput2" placeholder="scientific name">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">How many people a year die from eating fugu?</label>
+                <input name="deaths" type="text" class="form-control" id="formGroupExampleInput2" placeholder="ex. 10 or 54">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">What country is fugu powder used to create zombification?</label>
+                <input name="country" type="text" class="form-control" id="formGroupExampleInput2">
+            </div>
+            <div class="mx-auto" style="width: 200px;">
+                    <button name="submit" type="submit" class="btn btn-secondary btn-lg">Get Results!</button>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
