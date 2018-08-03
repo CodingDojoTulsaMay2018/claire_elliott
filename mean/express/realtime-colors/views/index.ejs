@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Real-Time Colors</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+<body>
+    <style>
+        body{
+            background-color: none;
+        }
+    </style>
+    <div class="container text-center mt-3">
+        <h2 class="display-4 text-white">Change the Background</h2>
+        <button id="green" type="button" class="btn btn-light btn-lg">Green</button>
+        <button id="blue" type="button" class="btn btn-light btn-lg">Blue</button>
+        <button id="purple" type="button" class="btn btn-light btn-lg">Purple</button>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        var socket = io();
+        socket.on('display', function(data){
+            console.log("Client side display!" + data.bgcolor);
+            $('body').css('background-color', data.bgcolor);
+        });
+        $('#green').click(function(){
+            socket.emit('green');
+        });
+        $('#blue').click(function(){
+            socket.emit('blue');
+        });
+        $('#purple').click(function(){
+            socket.emit('purple');
+        });
+    });
+</script>
+</html>
