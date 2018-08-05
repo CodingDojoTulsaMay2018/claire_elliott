@@ -24,6 +24,11 @@ io.on('connection', function (socket) {
     socket.emit('chats', {
         chats: msgs
     });
+    // sends list of users to new connection
+    socket.on('receive_userlist', function(){
+        console.log("User list received, updating userlist");
+        io.emit('update_userlist', {userlist: names});
+    });
     
     console.log("back at server");
     //grabbing user name and validating duplicates
@@ -56,5 +61,6 @@ io.on('connection', function (socket) {
             msg: text.msg, person: text.person
         });
     });
+    
 });
 

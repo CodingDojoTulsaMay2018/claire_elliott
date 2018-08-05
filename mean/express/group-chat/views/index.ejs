@@ -26,7 +26,10 @@
                     <i class="fa fa-twitch fa-2x" aria-hidden="true"></i>
                 </div>
             </div>
-            <div id="user-list" class="col col-lg-3"></div>
+            <div id="user-list" class="col col-lg-3">
+                <h3 class="display-4">WHO'S ONLINE</h3>
+                <div id="online"></div>
+            </div>
             <div id="main-content" class="col col-lg-8">
                 <p id="demo" class="welcome"></p>
                 <div id="chatbox" class="chatbox form-control chat scrollbar">
@@ -36,7 +39,7 @@
                         <form id="text" class="lead emoji-picker-container">
                             <input type="text" class="form-control p-2" id="msg" data-emojiable="true">
                             <div class="input-group-append">
-                                <button id="input-btn" type="button" id="button" class="btn btn-dark" onclick="document.getElementById('myInput').value = ''">Send</button>
+                                <button id="input-btn" type="button" id="button" class="btn btn-dark">Send</button>
                             </div>
                     </div>
                     </form>
@@ -76,6 +79,9 @@
             socket.on('new_user', function(data){
                 $('.chatbox').append($('<p>').html(`<span>${data.new_user} has just joined the chat!</span>`));
                 $('span').attr('class', 'new-user');
+            });
+            socket.emit('receive_userlist', function(){
+                console.log("Receiving User list!")
             });
         }
         
@@ -118,6 +124,14 @@
             // every time function is called, auto scrolls to the bottom
             $('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);
         });
+
+        socket.on('update_userlist', function(data){
+            for(var i = 0; i < data.userlist.length; i++){
+                $('#online').append($('<p>').html('<i class="fa fa-user" aria-hidden="true"></i>' + data.userlist[i]));
+            }
+            console.log("User list updated!");
+        });
+        
     });
 </script>
 
