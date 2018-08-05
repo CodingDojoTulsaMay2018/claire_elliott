@@ -24,6 +24,10 @@
     </div>
 </body>
 <script>
+    function getName(){
+        var name = prompt("Select a display name:");
+        socket.emit('add_name', {displayName: name});
+    }
     $(document).ready(function(){
         var socket = io();
         socket.on('display', function(data){

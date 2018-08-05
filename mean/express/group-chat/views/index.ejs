@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/emoji.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-md-center">
+            <div id="sidebar" class="col col-lg-1">
+                <div class="chats">
+                    <i class="fa fa-steam-square fa-2x" aria-hidden="true"></i>
+                </div>
+                <div class="chats">
+                    <i class="fa fa-twitch fa-2x" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div id="user-list" class="col col-lg-3"></div>
+            <div id="main-content" class="col col-lg-8">
+                <p id="demo" class="welcome"></p>
+                <div id="chatbox" class="chatbox form-control chat scrollbar">
+                </div>
+                <form id="text">
+                    <div class="lead emoji-picker-container input-group mb-3">
+                        <form id="text" class="lead emoji-picker-container">
+                            <input type="text" class="form-control p-2" id="msg" data-emojiable="true">
+                            <div class="input-group-append">
+                                <button id="input-btn" type="button" id="button" class="btn btn-dark" onclick="document.getElementById('myInput').value = ''">Send</button>
+                            </div>
+                    </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="/js/config.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/jquery.emojiarea.js"></script>
+    <script src="/js/emoji-picker.js"></script>
+</body>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        var socket = io();
+        var person = prompt("Please enter your name");
+        //checking for dupes
+        if (person == null || person == "") {
+            location.reload();
+        } else {
+            socket.emit('name', {
+                name: person
+            })
+
+            //duplicate person failed, hiding container
+            socket.on('dupes', function (data) {
+                console.log(data.dupes);
+                $('#demo').html(data.dupes)
+                $('.container').hide()
+            });
+            //greets a validated person
+            txt = "Hello " + person + "! How are you today?";
+            $(".container").show();
+            document.getElementById("demo").innerHTML = txt;
+            //when new user joins, broadcasts to users w/o pushing to the msg array
+            socket.on('new_user', function(data){
+                $('.chatbox').append($('<p>').html(`<span>${data.new_user} has just joined the chat!</span>`));
+                $('span').attr('class', 'new-user');
+            });
+        }
+        
+        //magic emoticon function dust
+        $(function () {
+            // Initializes and creates emoji set from sprite sheet
+            window.emojiPicker = new EmojiPicker({
+                emojiable_selector: '[data-emojiable=true]',
+                assetsPath: 'images/',
+                popupButtonClasses: 'fa fa-smile-o'
+            });
+            window.emojiPicker.discover();
+        });
+        var user = person
+        //submitting a new message
+        $('#input-btn').on('click', function (e) {
+            e.preventDefault()
+            var msg = $('#msg').val();
+            console.log($('#msg').val() + "is the new value in the text field");
+            console.log("text submission works: " + msg)
+            socket.emit('text', {
+                msg: msg,
+                person: person
+            })
+        });
+
+        //this is so people see all the chats when logging in
+        socket.on('chats', function (chats) {
+            // console.log(chats.chats+" is what I'm putting into html");
+            for (var i of chats.chats) {
+                console.log(i + " is the next i");
+                $('.chatbox').append($('<p>').text(i.person + ": " + i.msg));
+            }
+            
+        });
+
+        //this shows each new message after login
+        socket.on('msg', function (chats) {
+            $('.chatbox').append($('<p>').text(chats.person + ": " + chats.msg));
+            // every time function is called, auto scrolls to the bottom
+            $('#chatbox').scrollTop($('#chatbox')[0].scrollHeight);
+        });
+    });
+</script>
+
+</html>
