@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container mt-3">
+        <div class="image">
+            <img src="<%= shark.img %>">
+        </div>
+        <div class="main-content">
+            <h3><%= shark.name %></h3> <a href="/sharks/edit/<%= shark._id %>" class="badge badge-info">Edit</a> <a href="/sharks/destroy/<%= shark._id %>" class="badge badge-danger">Delete</a> <a href="/" class="badge badge-secondary">Go Back</a>
+            <table class="table table-borderless table-sm">
+                <tbody>
+                    <tr>
+                        <td>Species</td>
+                        <td><%= shark.species %></td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td><%= shark.age %></td>
+                    </tr>
+                    <tr>
+                        <td>Location</td>
+                        <td><%= shark.location %></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+.jumbotron-fluid,
+.jumbotron{
+    padding-bottom: 5rem;
+    background: url('../img/jumbotron-bg-3.jpg');
+    background-size: cover;   
+}
+.main-content,
+.image{
+    display: inline-block;
+    vertical-align: top;
+}
+.image img{
+    border-radius: 30px;
+    width: 300px;
+    margin-right: 20px;
+}
+.table td:nth-of-type(odd){
+    font-weight: bold;
+}

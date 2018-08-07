@@ -12,7 +12,7 @@
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/emoji.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link id="stylesheet" rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
 <body>
@@ -42,7 +42,8 @@
                                 <button id="input-btn" type="button" id="button" class="btn btn-dark">Send</button>
                             </div>
                     </div>
-                    </form>
+                </form>
+                <button id="light-green" type="submit" class="btn btn-secondary">Light Green</button>
             </div>
         </div>
     </div>
@@ -131,6 +132,10 @@
             }
             console.log("User list updated!");
         });
+        $('#light-green').on ('submit', function(e){
+            e.preventDefault();
+            $('#stylesheet').attr('href', '/css/style.1.css');
+        })
         
     });
 </script>

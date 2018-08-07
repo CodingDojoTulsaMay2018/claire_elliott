@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- based on the structure of your messages, determine how to display them -->
+        <% if(messages.quoting) { %>
+            <% for (var message of messages.quoting) { %>
+                <p class="error"><%= message %></p>
+            <% } %>
+        <% } %>
+        <form class="pure-form pure-form-aligned" method="post" action="/create">
+            <fieldset>
+                <div class="pure-control-group">
+                    <label for="author">Name</label>
+                    <input id="author" name="author" type="text">
+                </div>
+                <div class="pure-control-group">
+                    <label for="content">Quote</label>
+                    <textarea id="content" name="content"></textarea>
+                </div>
+                <button type="submit" class="pure-button pure-button-primary">Add a Quote</button>
+                <a class="pure-button pure-button-primary" href="/quotes">Skip to Quotes</a>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
