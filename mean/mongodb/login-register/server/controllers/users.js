@@ -11,7 +11,6 @@ module.exports = {
         user.save((err) =>{
             if(err){
                 for(var key in err.errors){
-                    console.log(err.errors[key].message);
                     req.flash('registration', err.errors[key].message);
                 }
                 res.redirect("/");
@@ -20,7 +19,6 @@ module.exports = {
                 req.session.id = user._id;
                 req.session.name = user.name;
                 user.password = bcrypt.hashSync(req.body.password, 10);
-                console.log(user.password);
                 user.save();
                 res.redirect("/success");
             }
