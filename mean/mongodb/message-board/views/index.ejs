@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <h3 class="display-4 text-center mt-3">The Dojo Message Board</h3>
+        <hr>
+        <div class="container">
+            <div class="jumbotron mt-3 p-4">
+                <div class="container">
+                    <% if(messages.posts){ %>
+                        <% for(var message of messages.posts){ %>
+                            <p class="error"><%= message %></p>
+                        <% } %>
+                    <% } %>
+                    <form action="/message/add" method="post">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="content">Message</label>
+                            <textarea class="form-control" id="content" name="content" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-4">
+            <% for(var message of messages){ %>
+                <div class=" message container mb-3">
+                    <h3><%= message.name %></h3>
+                    <p>"<%= message.content %>"</p>
+                </div>
+                <div class="comments container top">
+                    <% if(messages.comments){ %>
+                        <% for(var message of messages.comments){ %>
+                            <p class="error"><%= message %></p>
+                        <% } %>
+                    <% } %>
+                    <% for(var comment of message.comments){ %>
+                            <h6><%= comment.name %></h6>
+                            <p class="mb-2">"<%= comment.content %>"</p>
+                    <% } %>
+                    <hr>
+                    <form action="comments/add/<%= message._id %>" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-sm" id="name" name="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control form-control-sm" id="content" name="content" placeholder="Comment"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-sm">Comment</button>
+                    </form>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+
+</html>
