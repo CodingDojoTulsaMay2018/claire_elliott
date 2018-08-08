@@ -18,8 +18,8 @@
         <div class="container">
             <div class="jumbotron mt-3 p-4">
                 <div class="container">
-                    <% if(messages.posts){ %>
-                        <% for(var message of messages.posts){ %>
+                    <% if(messages.messageCreation){ %>
+                        <% for(var message of messages.messageCreation){ %>
                             <p class="error"><%= message %></p>
                         <% } %>
                     <% } %>
@@ -39,23 +39,23 @@
         </div>
 
         <div class="container my-4">
-            <% for(var message of messages){ %>
+            <% for(var post of posts){ %>
                 <div class=" message container mb-3">
-                    <h3><%= message.name %></h3>
-                    <p>"<%= message.content %>"</p>
+                    <h3><%= post.name %></h3>
+                    <p>"<%= post.content %>"</p>
                 </div>
                 <div class="comments container top">
-                    <% if(messages.comments){ %>
-                        <% for(var message of messages.comments){ %>
+                    <% if(messages.commentCreation){ %>
+                        <% for(var message of messages.commentCreation){ %>
                             <p class="error"><%= message %></p>
                         <% } %>
                     <% } %>
-                    <% for(var comment of message.comments){ %>
+                    <% for(var comment of post.comments){ %>
                             <h6><%= comment.name %></h6>
                             <p class="mb-2">"<%= comment.content %>"</p>
                     <% } %>
                     <hr>
-                    <form action="comments/add/<%= message._id %>" method="post">
+                    <form action="comments/add/<%= post._id %>" method="post">
                         <div class="form-group">
                             <input type="text" class="form-control form-control-sm" id="name" name="name" placeholder="Name">
                         </div>

@@ -9,7 +9,7 @@ module.exports = {
                 console.log(err);
             }
             else {
-                res.render("index", {messages: messinDB});
+                res.render("index", {posts: messinDB});
             }
         });
     }, 
@@ -19,7 +19,7 @@ module.exports = {
             if(err){
                 for(var key in err.errors){
                     console.log(err.errors[key].message);
-                    req.flash('posts', err.errors[key].message);
+                    req.flash('messageCreation', err.errors[key].message);
                 }
                 res.redirect("/");
             } 
@@ -34,7 +34,7 @@ module.exports = {
             if(err){
                 for(var key in err.errors){
                     console.log(err.errors[key].message);
-                    req.flash('comments', err.errors[key].message);
+                    req.flash('commentCreation', err.errors[key].message);
                 }
                 res.redirect("/");
             } 
