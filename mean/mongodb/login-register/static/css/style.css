@@ -1,0 +1,11 @@
+#wrapper{
+    width: 1000px;
+    margin: 0 auto;
+}
+.error{
+    font-size: .7rem;
+    color: red;
+}
+.col-lg-6{
+    padding: 20px;
+}
