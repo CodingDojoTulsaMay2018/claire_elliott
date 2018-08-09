@@ -48,7 +48,7 @@ module.exports = {
         });
     },
     delete: (req, res) => {
-        Task.findOneAndRemove({_id: req.params.id}, (err, tasksinDB) => {
+        Task.findOneAndRemove({_id: req.params.id}, (err) => {
             if(err) {
                 console.log(err);
                 res.json({message: "Error", error: err});
