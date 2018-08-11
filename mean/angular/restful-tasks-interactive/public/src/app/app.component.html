@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container text-center">
+    <h2 class="display-4">{{ title }}!</h2>
+    <button (click)="showTasks()" type="button" class="btn btn-info btn-lg">Get all Tasks</button>
+</div>
+<div *ngIf="shouldDisplayTasks" class="container text-center my-4">
+    <table class="table table-borderless table-sm">
+        <tbody>
+            <tr *ngFor="let task of tasks">
+                <td>{{ task.title }}</td>
+                <td><button (click)="showTask(task)" type="button" class="btn btn-secondary btn-lg">Show</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div *ngIf="shouldDisplayTask" class="container text-center">
+    <h4 class="display-4">{{ task.title }}</h4>
+    <p>{{ task.description }}</p>
+</div>
