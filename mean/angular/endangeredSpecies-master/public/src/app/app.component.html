@@ -1,0 +1,32 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Endangered Animals
+  </h1>
+  <div *ngFor="let animal of animals" style="width: 400px; vertical-align: top; display: inline-block; margin: 0 auto;">
+    <h3>{{ animal.name }}</h3>
+    <p>Population: {{ animal.population }}</p>
+    <button type="button" (click)="showSection(animal)">Show More</button>
+  </div>
+</div>
+<div style="width: 1000px; margin: 0 auto; margin-top: 3rem;">
+  <div style="width: 450px; vertical-align: top; display: inline-block; margin: 0 auto;">
+      <h2>Add an Animal</h2>
+      <div *ngIf="errors">
+            <p *ngFor="let err of errors" style="color: red; font-size: .7rem;">{{ err }}</p>
+        </div>
+    <form (submit)="onSubmit()">
+      <label for="newAnimal.name">Name</label>
+      <input type="text" style="display: block;" [(ngModel)]="newAnimal.name" name="newAnimal.name"/>
+      
+      <label for="newAnimal.population">Population</label>
+      <input  type="number" style="display: block;" [(ngModel)]="newAnimal.population" name="newAnimal.population"/>
+      <button type="submit">Create Animal</button>
+    </form>
+  </div>
+  <div *ngIf="shouldDisplaySection" style="width: 450px; vertical-align: top; display: inline-block; margin: 0 auto;">
+    <h3>{{ animal.name }}</h3>
+    <p>Population: {{ animal.population }}</p>
+    <button type="button" (click)="hideSection($event)">Clear</button>
+  </div>
+</div>
