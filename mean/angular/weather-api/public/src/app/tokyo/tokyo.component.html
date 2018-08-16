@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="card large blue-grey lighten-4">
+    <div class="card-content">
+      <h3 class="header">{{ weather.city.name }}</h3>
+      <div class="row">
+        <div class="col s6">
+          <table class="highlight">
+            <tbody>
+              <tr>
+                <td><strong>Humidity</strong></td>
+                <td>{{ weather.list[weather.list.length-1].main.humidity }}%</td>
+              </tr>
+              <tr>
+                  <td><strong>Temperature (Avg.)</strong></td>
+                  <td>{{ weather.list[weather.list.length-1].main.temp }} F</td>
+                </tr>
+                <tr>
+                    <td><strong>Temperature (High)</strong></td>
+                    <td>{{ weather.list[weather.list.length-1].main.temp_max }} F</td>
+                  </tr>
+                  <tr>
+                      <td><strong>Temperature (Low)</strong></td>
+                      <td>{{ weather.list[weather.list.length-1].main.temp_min }} F</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Currently...</strong></td>
+                        <td>{{ weather.list[weather.list.length-1].weather[0].description }}</td>
+                      </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col s6 center-align">
+          <img src="../../assets/img/tokyo.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
