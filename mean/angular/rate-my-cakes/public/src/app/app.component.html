@@ -1,0 +1,48 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="row">
+    <div class="col-lg-5">
+      <h3>Add Pokemon</h3>
+      <div *ngIf="errors">
+        <p *ngFor="let err of errors" style="color: red; font-size: .7rem;">{{ err }}</p>
+      </div>
+      <form (submit)="createPokeFromService()">
+        <label for="newPoke.name">Name</label>
+        <input type="text" class="form-control form-control-sm" [(ngModel)]="newPoke.name" name="newPoke.name" />
+        <label for="newPoke.species">Species</label>
+        <input type="text" class="form-control form-control-sm" [(ngModel)]="newPoke.species" name="newPoke.species" />
+        <label for="newPoke.trainer">Trainer</label>
+        <input type="text" class="form-control form-control-sm" [(ngModel)]="newPoke.trainer" name="newPoke.trainer" />
+        <label for="newPoke.url">Image URL</label>
+        <input type="text" class="form-control form-control-sm" [(ngModel)]="newPoke.url" name="newPoke.url" />
+        <button type="submit" class="btn btn-primary mt-2 btn-lg">Submit</button>
+      </form>
+    </div>
+    <div class="col-lg-7">
+      <h3>Featured Pokemon</h3>
+      <p class="lead">Click on an image to display the Pokemon and its rating.</p>
+      <app-display *ngIf="selectedPoke" [pokeToShow]="selectedPoke"></app-display>
+    </div>
+  </div>
+</div>
+<div id="wrapper">
+  <div class="card-deck">
+    <div *ngFor="let poke of selectedPokes" class="card">
+      <img class="card-img-top" src="{{ poke.url }}" (click)="pokeToShow(poke)">
+      <div class="card-body bg-secondary">
+        <h3 class="card-title text-center">{{ poke.name }}</h3>
+        <form (submit)="updatePokeFromService(poke)">
+          <input type="text" class="form-control form-control-sm" [(ngModel)]="newRating.comment" name="newRating.comment" placeholder="Type your comment here"
+          />
+          <select class="custom-select mt-2" name="newRating.star" [(ngModel)]="newRating.star">
+            <option value="1">1 Star</option>
+            <option value="2">2 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="5">5 Stars</option>
+          </select>
+          <button type="submit" class="btn btn-primary mt-2 btn-sm">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

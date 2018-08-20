@@ -1,0 +1,13 @@
+.img,
+.details{
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    margin: 0 10px;
+}
+.details{
+    overflow-y: auto;
+}
+.row{
+    height: 300px !important;
+}

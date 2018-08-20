@@ -1,0 +1,18 @@
+#wrapper{
+    width: 1000px;
+    margin: 0 auto;
+}
+.jumbotron-fluid{
+    padding: 2rem;
+}
+.row{
+    width: 1200px;
+    margin: 0 auto;
+}
+.col-lg-5,
+.col-lg-7{
+    padding: 0 50px;
+}
+.card-img-top{
+    max-width: 100%;
+}

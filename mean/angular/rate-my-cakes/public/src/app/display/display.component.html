@@ -1,0 +1,14 @@
+<div class="row">
+  <div class=" col-lg-5 img">
+    <img src="{{ pokeToShow.url }}">
+  </div>
+  <div class="col-lg-6 details">
+    <p><b>NAME</b> {{ pokeToShow.name }}</p>
+    <p><b>SPECIES</b> {{ pokeToShow.species }}</p>
+    <p><b>TRAINER</b> {{ pokeToShow.trainer }}</p>
+    <p><b>AVERAGE RATING</b> {{ findAverageRating() }}</p>
+    <p *ngFor="let rating of pokeToShow.ratings">
+      <em>"{{rating.comment}}"</em> &mdash; {{rating.star}} Stars
+    </p>
+  </div>
+</div>
