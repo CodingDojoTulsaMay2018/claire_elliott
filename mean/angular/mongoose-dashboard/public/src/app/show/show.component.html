@@ -1,0 +1,74 @@
+<div *ngIf="selectedShark" class="container mt-3">
+  <div class="image">
+    <img src="{{selectedShark.img}}">
+  </div>
+  <div class="main-content">
+    <h3>
+      {{ selectedShark.name }}
+    </h3>
+    <a (click)="shouldDisplayEdit()" class="badge badge-info">Edit</a>
+    <a (click)="deleteSharkFromService(selectedShark)" class="badge badge-danger">Delete</a>
+    <a (click)="goHome()" class="badge badge-secondary">Go Back</a>
+    <table class="table table-borderless table-sm">
+      <tbody>
+        <tr>
+          <td>Species</td>
+          <td>
+            {{ selectedShark.species }}
+          </td>
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td>
+            {{ selectedShark.age }}
+          </td>
+        </tr>
+        <tr>
+          <td>Location</td>
+          <td>
+            {{ selectedShark.location}}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div *ngIf="displayEdit">
+      <form (submit)="updateSharkFromService(selectedShark)" method="post">
+        <div class="form-group row">
+          <label for="name" class="col-sm-2 col-form-label">Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name" [(ngModel)]="selectedShark.name" name="name" value="{{ selectedShark.name }}">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="species" class="col-sm-2 col-form-label">Species</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="species" [(ngModel)]="selectedShark.species" name="species" value="{{ selectedShark.species }}">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="age" class="col-sm-2 col-form-label">Age</label>
+          <div class="col-sm-10">
+            <input type="number" class="form-control" id="age" [(ngModel)]="selectedShark.age" name="age" value="{{ selectedShark.age }}">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="location" class="col-sm-2 col-form-label">Location</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="location" [(ngModel)]="selectedShark.location" name="location" value="{{ selectedShark.location }}">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="img" class="col-sm-2 col-form-label">Image URL</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="img" [(ngModel)]="selectedShark.img" name="img" value="{{ selectedShark.img }}">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

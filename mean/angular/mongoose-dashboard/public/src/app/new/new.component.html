@@ -1,0 +1,39 @@
+<div class="container">
+  <form (submit)="createSharkFromService()" method="post">
+    <div class="form-group row">
+      <label for="name" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="name" [(ngModel)]="newShark.name" name="newShark.name">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="species" class="col-sm-2 col-form-label">Species</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="species" [(ngModel)]="newShark.species" name="newShark.species">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="age" class="col-sm-2 col-form-label">Age</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id="age" [(ngModel)]="newShark.age" name="newShark.age">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="location" class="col-sm-2 col-form-label">Location</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="location" [(ngModel)]="newShark.location" name="newShark.location">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="img" class="col-sm-2 col-form-label">Image URL</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="img" [(ngModel)]="newShark.img" name="newShark.img">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>

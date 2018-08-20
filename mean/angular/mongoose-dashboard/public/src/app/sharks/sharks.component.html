@@ -1,0 +1,9 @@
+<div class="container mt-4 text-center">
+  <div class="row">
+          <div *ngFor="let shark of selectedSharks" class="col-lg-3 text-center">
+              <img src="">
+              <h4>{{ shark.name }}</h4>
+              <button [routerLink]="['/show/', shark._id]">Show More</button>
+          </div>
+  </div>
+</div>
