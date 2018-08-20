@@ -1,0 +1,10 @@
+<div class="container mt-4">
+  <h2 class="display-2"><i class="fas fa-coins fa-sm"></i> Mine ShintoCoins</h2>
+  <p>Here you can minie ShintoCoins by being the first to solve the algorithm below.</p>
+  <p><strong>{{ selectedQuestion.question }}</strong></p>
+  <input [(ngModel)]="answer" name="answer" class="form-control w-50" type="text">
+  <button (click)="checkAnswer()" type="submit" class="btn btn-primary">Submit</button>
+  <button (click)="getQuestion()" type="submit" class="btn btn-secondary">Get New Question</button>
+  <p *ngIf="isIncorrect" class="incorrect mt-3">Sorry, try again!</p>
+  <p *ngIf="isCorrect" class="correct mt-3">Correct! 1 ShintoCoin added to your wallet.</p>
+</div>

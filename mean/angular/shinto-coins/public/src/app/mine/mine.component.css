@@ -1,0 +1,26 @@
+.form-control{
+    display: inline-block;
+}
+button{
+    margin-left: 15px;
+}
+.incorrect,
+.correct{
+    text-align: center;
+    width: 50%;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid;
+}
+.incorrect{
+    background-color: lightcoral;
+    font-weight: bold;
+    border: darkred;
+    color: darkred;
+}
+.correct{
+    background-color: lightgreen;
+    font-weight: bold;
+    border: darkgreen;
+    color: darkgreen;
+}

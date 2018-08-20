@@ -1,0 +1,20 @@
+<div class="container mt-5">
+  <ul class="nav nav-pills nav-fill">
+    <li class="nav-item">
+      <a class="nav-link btn btn-primary" [routerLink]="['/home']">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link btn btn-primary" [routerLink]="['/mine']">Mine Coins</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link btn btn-primary" [routerLink]="['/buy']">Buy Coins</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link btn btn-primary" [routerLink]="['/sell']">Sell Coins</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link btn btn-primary" [routerLink]="['/ledger']">Ledger History</a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet> 
+</div>

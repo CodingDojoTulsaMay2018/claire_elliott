@@ -1,0 +1,7 @@
+<div class="container mt-4">
+  <h2 class="display-2"><i class="fas fa-coins fa-sm"></i> Buy ShintoCoins</h2>
+  <p>Current ShintoCoin Value &mdash; ${{ coinRate }}.00</p>
+  <p>Current Wallet Amount &mdash; {{ wallet }} ShintoCoin(s)</p>
+  <input [(ngModel)]="amount" name="amount" class="form-control w-50" type="number">
+  <button (click)="buyCoins()" type="submit" class="btn btn-primary">Buy</button>
+</div>
